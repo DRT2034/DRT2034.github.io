@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Arthur Sterckx"
 date:   2025-09-02 10:19:32 +0200
 categories: jekyll update
 ---
