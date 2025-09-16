@@ -182,4 +182,4 @@ Linking demographics and traits to impulsive and planned spending:
 values, and financial well-being of self-described money managers. Journal of economic
 psychology, 33(6), 1129-1142.
 - Antonides, G., De Groot, I. M., & Van Raaij, W. F. (2011). Mental budgeting and the
-management of househ
+management of household finance. Journal of Economic Psychology, 32(4), 546-555.
