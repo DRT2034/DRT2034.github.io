@@ -3,6 +3,7 @@ layout: post
 title:  "On dynamic thinking"
 date:   2025-09-02 10:19:32 +0200
 categories: Findings 
+published: false
 ---
 I’ve been wondering lately about the nature of human’s thinking. It seems to me when we approach any sort of consideration, both on past, present or future events, that our thinking can be categorized either as static or dynamic.
 
