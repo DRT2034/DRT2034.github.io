@@ -5,7 +5,7 @@ date:   2025-09-28 15:40:21 +0200
 categories: Opinion
 published: true
 ---
- <p align="center">~ Preparedness is the key to Self Preservation</p> 
+ <center>~ Preparedness is the key to Self Preservation</center>>
 
 One might imagine the self as a sort of blubber entity in outer space representing a planet. Any other being we interact with might then be another blubber entity, and whenever we enter one another’s proximity and interact, it’s like the never ending moulding of the blubber we are changes in various directions. We are influenced by the other’s being. 
 
@@ -13,7 +13,7 @@ We might view the outer edges of our blubber to be a frequency graph where the c
 
 If we look at our life through this framework, we can imagine the need for a kind of protective sphere that hovers around our blubber at a certain distance, a sort of first line of defense for our brains. Such a sphere could be employed for various reasons:
 
-## As a way to make sure other entities cannot poke into our being and wreak havoc as they please (input)
+## As a way to make sure other entities cannot poke into our being and wreak havoc as they please (Input)
 
 Think for instance about either social media (or correspondingly YouTube, reddit) or about any one person (with a given level of similarity to us) coming into our conscious space. For the former, we might want to make sure their opinion doesn’t reach us whatsoever. The reason being that we don’t know anything about them, and as such their personal traits hold no value for us to compare ourselves to and take their advice. 
 
@@ -29,7 +29,7 @@ This revelation of the reddit option led me to the conclusion that it’s imposs
 
 If this reads like I’m circling the drain, it’s because I am, as in reality when it comes to looks, the only person to cross my threshold is my spouse. There might be more people, but why waste energy figuring that out? At the end of the day the only person you’d be able to get an objective take from about your looks might really be your partner, and all other people whose opinions we might accept in varying degrees must also be treated as such: we accept their opinion only to the degree they cross our thresholds. This is the point I’m making and why this anecdote relates to the broader topic I’m discussing. People’s poking of our blubber must only be allowed to the degree we personally accept them to, and in reality we don’t actually hold any standards to this most of the time, especially when it comes to online opinions.
 
-## So that we might ensure better emotional stability (output)
+## So that we might ensure better emotional stability (Output)
 This can be seen through the lens of the blubber’s outer edges whose form follows that of a frequency graph. If we let our being go all out because of any one reason or another, we will not find disciplined joy. This kind of reminds of the musician who’s able to write their best music when high as a kite, and doesn’t learn the ways of the artist, whose journey consists of disciplined trial and error to achieve the right output. I’m not a musician though, so I’m not sure whether that’s even how it works for ones at the top of their field. Nevertheless, for a person like me, it’s important to keep a lid on the way my brain is allowed to function, otherwise the volatility might go too far and asylum is sought in the land of escapism. Quite sure this is how it works for most people. As such, by installing a barrier between our brain’s raw tendencies and our output, we might mitigate the effects of an uncertain control room.
 
 
