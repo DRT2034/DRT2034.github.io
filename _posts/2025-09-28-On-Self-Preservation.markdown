@@ -5,7 +5,7 @@ date:   2025-09-28 15:40:21 +0200
 categories: Opinion
 published: true
 ---
- ~ Preparedness is the key to Self Preservation
+ <p align="center">~ Preparedness is the key to Self Preservation</p> 
 
 One might imagine the self as a sort of blubber entity in outer space representing a planet. Any other being we interact with might then be another blubber entity, and whenever we enter one another’s proximity and interact, it’s like the never ending moulding of the blubber we are changes in various directions. We are influenced by the other’s being. 
 
