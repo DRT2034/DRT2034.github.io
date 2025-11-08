@@ -5,7 +5,6 @@ date:   2025-11-01 15:40:21 +0200
 categories: Opinion
 published: true
 ---
-# Prelude 
 
 A thought exercise I’ve been engaging in since I was a little boy is that of the time machine game: what if I was teleported back in time some 500 years, or better 5000 years? What exactly would I be able to produce that the people of that period didn’t know how to produce themselves. What would be my competitive advantage and how exactly am I a master of my own time period? 
 
