@@ -63,5 +63,5 @@ In balancing and properly developing these pillars, I posit that our ability to 
 We can then extend this even further, and propose the notion that at the base of Self Sovereignty lies immersion, for the only way to truly commit to one's fixed objective is to be truly there in the present. If we aren't we might tell ourselves we did the workout, but subconsciously we know we cheated ourselves or could've done more. As such the ability to be truly present and be with a task in this instant forms a most important ingredient in our recipe of Self Preservation. To understand the spirit of what I'm referring to, I had my good friend GPT generate the following portrayal:
 
 <p align="center">
-  <img src="SelfSovereignty.png" width="260">
+  <img src="/assets/SelfSovereignty.png" width="260">
 </p>
