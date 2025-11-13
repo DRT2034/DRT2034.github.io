@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Senseo Electricity Part 1"
+title:  "Senseo Basic Electricity"
 date:   2025-11-13 06:43:21 +0200
 categories: Opinion
 published: true
