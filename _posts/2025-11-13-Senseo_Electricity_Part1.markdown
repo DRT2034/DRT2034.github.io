@@ -18,9 +18,9 @@ So electrons make up part of everything there is, and if they themselves are in 
 
 Moreover, these moving electrons aren’t even moving that fast, only at a couple of millimeter per second, and can be visualized by one of those Newton cradle pendulums. A bunch of electrons sit on a metal wire, and when on the one end something is put in motion, it’s felt immediately on the other, at close to the speed of light. Think of pushing a light switch, which pushes the first electron near the switch and at the other end, the lamp, the push is felt and the bulb is on. When it comes to applications in the house, however, it’s managed in a slightly different manner. The power generation station somewhere in the vicinity is what’s pushing electrons (that are already there) into motion, and my house is managed in a big circuit, along which a bunch of small circuits are positioned. So when I turn on the switch in my room, what in fact happens is that the gate on the small circuit of lighting of my room gets closed, whereby electrons are put in motion in that circuit, and they are pushed through the circuit such that the application, my lightning, feels the current. So even on my desk lamp, when I press the switch, there is actually a wire from the plug coming and going through the lamp, so that this very little circuit is getting connected to the big circuit that is my house. As such, electrons are actually constantly on the tracks/circuits, but once the circuit becomes connected to the power station, they receive energy and start moving and the light bulb starts glowing.
 
-<p align="center">
-  <img src="/assets/PendulumNewton.webp" width="260">
-</p>
+<div style="text-align: center;">
+  <img src="/assets/PendulumNewton.webp" width="340">
+</div>
 
 Essentially, there are two ways in which electrons can move: AC and DC. It is, however, important to first also stand still and define the basics. 
 
@@ -33,7 +33,7 @@ Essentially, there are two ways in which electrons can move: AC and DC. It is, h
 *Magnetic field*: has the same idea as the electric field but occurs only when charges are actually moving. Similarly, in the combing example, a magnetic field only occurs when there is the actual movement of combing, while before and after, when there is no rubbing the charges stay still, there’s just an electric field.
 
 
-*Voltage*: is the difference in charge between two points. It tells us how badly charges want to move, so a high voltage signifies a strong push while a low one a gentle push. Measure here is Volt. If we can think of a water tank with a hose at the bottom, where the pressure on the water coming out is voltage, the amount in the tank is then charge. When we have a battery going low on our light and that light becomes dimmer, that’s decreasing voltage. For a very good tutorial: https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law. 
+*Voltage*: is the difference in charge between two points. It tells us how badly charges want to move, so a high voltage signifies a strong push while a low one a gentle push. Measure here is Volt. If we can think of a water tank with a hose at the bottom, where the pressure on the water coming out is voltage, the amount in the tank is then charge. When we have a battery going low on our light and that light becomes dimmer, that’s decreasing voltage. For a [very good tutorial](https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law). 
 
 *Resistance*: In the same example as for voltage, the hose width of the water tank signifies resistance, so that a narrow hose is more resistance and allows less charge to flow (so less current). A good conductor like copper has low resistance, an insulator like rubber has high resistance. Measured in Ohm (Ω).
 
