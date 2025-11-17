@@ -17,6 +17,26 @@
       </header>
       <main class="page-content">
         {{ content }}
+        <div class="newsletter">
+        <p>Get an email when I publish something new:</p>
+
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/IBOS1"
+          method="post"
+         target="_blank"
+          class="embeddable-buttondown-form"
+        >
+         <input
+            type="email"
+            name="email"
+            placeholder="Type your email…"
+            required
+         />
+
+         <input type="hidden" name="embed" value="1" />
+         <button type="submit">Subscribe</button>
+        </form>
+      </div>
       </main>
     </div>
   </body>
