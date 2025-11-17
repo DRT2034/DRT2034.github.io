@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Senseo Basic Electricity 3: Grid to Wall Socket"
+date:   2025-11-17 10:43:21 +0200
+categories: Opinion
+published: true
+---
+
+To bring it all together, we can now look what happens from the point the moving electrons leave the power station, to the point it comes out of my wall socket. First, we’ve seen that the AC type current is simply the electrons being pushed back and forth through a metal wire (conductor) at 50 times a second (50Hz here in Belgium). Inside the power plants, the generators are what is pushing the electrons back and forth (see Generation section), using high voltage to get the electrons over long distance efficiently. This is done using 3-phase AC, which just means there are three AC currents taking turns doing the push. This makes the grid have smoother and more constant power. So from the power plant to the transformer, there’s three live wires with electrons being pushed back and forth. 
+
+Somewhere in my neighborhood there is a transformer box lowering the voltage and outputting to 230V. As from this transformer, there’s a low-voltage delivery part and the three lines going from this box to my home, and then in my home as well, has three conductors, a live one, neutral one and an ‘earth’ one. The live wire is what carries 230V, the neutral wire is connected to the earth at the transformer, defining the voltage at zero so that the live wire has something to be measured against. This neutral wire isn’t without current, it just starts at zero at the transformer, but can be thought of as completing the circuit so that electrons from the live wire can flow back and forth (AC) .
+
+The earth wire on the other hand isn’t part of the electricity system and is just there for safety, it’s connected to a metal rod in the earth so that if something goes wrong (eg., casing gets damaged so that metal wire becomes live) the electrons have an escape into the soil. This will cause a very big current to go through that earth wire, which a breaker detects and immediately shuts off the circuit for. This also links to why birds can sit on the electricity wires and not get electrocuted, as to be electrocuted the electrons need a path to a lower voltage point such as neutral or ground. If you only touch one wire while not touching anything else (even the ground), electrons have nowhere to go so won’t move through you. 
+
+So the thick cable (with three types in) comes from the street transformer into my home and first encountering the meter,  which simply counts how much energy is used. After, it goes through the breaker panel of my home, which splits electricity into different circuits around the house (kitchen, living room, bathroom, etc.) and protects the house in case something goes wrong. If the breaker therefore goes off, it means there’s too many electrons trying to flow (high current) and the breaker flips and shuts of electricity. 
+
+Each room then has wires, again the three type of wires from before, coming from the breaker to the wall socket. So electrons get pushed through the live wire, travel through a device and then go back through the neutral wire to complete the loop. What then happens in my wall socket is nothing more than there just being three metal contact points, each connected to one of he wires. So in most instances there a wire carrying the AC push (live), one completing the loop (neutral) and one for safety (earth). Sockets with only two contact points (eg., lamp, TV, phone charger) therefore don’t have an earth wire, which can occur when a device is designed not to have exposed metal parts, or if it’s double insulated (as such the outside cannot become live if something breaks). 
+
+
+<div style="text-align: center;">
+  <img src="/assets/electricity.png" width="340">
+</div>

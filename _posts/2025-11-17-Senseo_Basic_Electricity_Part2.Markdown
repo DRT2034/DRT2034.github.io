@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Senseo Basic Electricity 3: Generation"
-date:   2025-11-17 06:43:21 +0200
+title:  "Senseo Basic Electricity 2: Generation"
+date:   2025-11-17 05:43:21 +0200
 categories: Opinion
 published: true
 ---
@@ -14,7 +14,6 @@ I think the most interesting question that may not be relevant to the Senseo mac
   <img src="/assets/HydroGenerator.png" width="340">
 </div>
 
-<img src="Molecule.png" alt="diagram" width="250" align="right"/>
 Another interesting concept that makes all of this work is the magnet itself. For what really is a magnet? It all starts at the point of atoms, which are made of a nucleus (protons and neutrons) and small electrons spinning around the nucleus. Everything we see is made of atoms. Now as seen before, the electrons are charged and moving and any moving charge creates a magnetic field around it. As such every electron acts like a miniature magnet in the atom. Now in most materials such as wood or copper, electrons are paired up in such a way that their magnetic field points in opposite directions, so when one electron’s field points north and the other’s south, they’ll cancel out with no net magnetism. 
 
 Now there are other materials (iron, nickel, cobalt) that have groups of atoms inside (domains) that naturally form and have huge amounts of electrons lined up together in the same direction so as to make magnetic fields. So each domain is it’s own magnet inside the metal. Now quite often in a material like iron, the domains point in random directions, and the metal isn’t magnetic overall as a result. But making magnetism is therefore the same as merely lining up these domains, which happens if we put a separate magnet next to it, the magnetic field makes the domains rotate and align in the same direction, making the iron have a north pole and south pole. So a magnet is physically just a piece of metal in which atomic magnetic fields are lined up. On the one end, the fields will point outwards (north pole) while on the other they’ll point inward (south pole). 
@@ -58,6 +57,10 @@ This summarizes the various ways a battery gets used up: copper ions from the el
 ### Rechargeable batteries**
 Those reactions causing the battery to die are never going to be undone unfortunately. What a rechargeable battery then does, is choosing materials that do allow for the chemistry to be reversed (batteries are made of loads of materials other than zinc and copper). In such batteries, nothing dissolves permanently into the electrolyte, no atoms get used up (such as zinc), and ions are moving back and forth instead of being destroyed and the structure of the electrodes (the metals) remains intact. What’s essentially being done is that ions are being stored inside the electrode during the design, so no ions are being created or destroyed in the battery. The ions then just simply move back and forth between electrodes (Anode and Cathode). 
 
+<div style="text-align: center;">
+  <img src="/assets/LithiumPhoneB.png" width="340">
+</div>
+
 This can best be explained at the hand of the most common rechargeable battery we use today, which is lithium ion (our phones). Such a battery has graphite (layers of carbon) as Anode, lithium metal oxide as Cathode, and lithium salt in organic solvent as electrolyte. So quite a different chemistry than the zinc copper battery we saw earlier. The ions that are stored and moving between sides is then lithium ion (Li⁺). Now the main point with this type of battery is that the metals don’t dissolve and the electrolyte isn’t used up, the lithium ions are just moving between them. While using a device, the battery has electrons going through the wire and ions going through the electrolyte, the ions moving out of the carbon layers (C–Li→C+Li⁺+e⁻) where only carbon stays behind, and into the lithium metal oxide (LiCoO₂+Li⁺+e⁻→Li₂CoO₂) which just absorbs it without changing structure. 
 
 Now when we charge the battery, the electrons are kind of forced backwards through the circuit so that electrons go back to the anode, and the lithium ions (Li⁺) go back to the anode. These types of batteries do eventually die, as electrodes (metals) start getting damaged or the ions don’t move back anymore, or if the electrolyte itself just starts degrading in quality.
@@ -73,3 +76,7 @@ Now charging is a pretty interesting process as this links directly to my earlie
 To have extra clarity, it must be pointed out that electrons don’t flow based on room availability, so to speak, but instead based on voltage difference, so based on pressure. If my charger has 5V and battery 3.7V, the electrons get pushed out of the cathode side even if that side isn’t full yet, making it so that I can charge even at 80% battery. So it’s all about relative voltage. The charger holds electrons at a lower potential and raises the battery cathode to the charger’s higher potential, which forces out electrons. 
 
 Something that’s actually quite interesting is, the charging rate occurs because of the voltage difference between the battery and the charger. If my battery is at 50% and has 3.6V going on, while at 0% it only has 3V going on, that means that at lower percentages of the battery, there’s a bigger voltage difference between the battery and the charger, making it charge faster in such a state than a nearly full state. This explains why charging from 90 to 100% takes so long. No such asymmetry exists while the battery is discharging. 
+
+<div style="text-align: center;">
+  <img src="/assets/LithiumChem.png" width="340">
+</div>

@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Senseo Basic Electricity 1: Electrons"
+title:  "Senseo Basic Electricity 1"
 date:   2025-11-13 06:43:21 +0200
 categories: Opinion
 published: true
 ---
 
 Electricity is the most straightforward element, but essentially I could write a post on this topic in and of itself, purely for considering where it comes from and how to go from nothing to something. 
+
+## Electrons
 
 At its base, electricity is just moving electrons, which are negative electrically charged (as opposed to positive ones called protons) pieces of matter that are fundamental in the universe. These pieces of matter have likely existed since the big bang, and make up parts of the atom, which are the building blocks of everything around us, from hair, plastic, air all the way to our own human cells. 
 
@@ -45,7 +47,7 @@ This transformer (wikipedia) is then just a simple component transferring the hi
 
 With DC, it’s a little simpler and more aligned with how I explained electricity in the beginning. Electrons only flow in one direction, such as for a Senseo machine, a desk lamp or my phone. DC is preferred for these devices for many reasons, such as the fact that electronics store energy using capacitors (see next section), microchips need stable reference voltage, and desk lamps only produce light with current flowing in one direction. Interestingly enough, batteries generate DC from a mere chemical reaction inside of it.
 
-### Converting AC to DC 
+## Converting AC to DC 
 This process, of electricity from outside my house (AC) coming in adapted so it’s usable for my devices (DC), consists of various quite important steps:
 
 **Transformer**: As already understood, these merely step up or down the voltage, keeping the charge type AC.
@@ -57,17 +59,3 @@ This diode is in fact quite impressive physics at work. It is made of two types 
 **Capacitor**: is a device that can store electric charge and is used to smooth out that bumpy flow. The idea is that whenever there is a rise in electrical current, the capacitor fills with charge, while whenever it fills, the capacitor releases the stored charge. So holding and releasing the charge allows the gaps between these forward bumps (created by the rectifier) to be filled, smoothing out the current. It essentially stores charge and slowly releases it again, mitigating the pulses of the capacitor. It consists of two metal plates and a very thin insulator, where the plates can hold opposite charges and the closer the plates the bigger the area so the more charge can be stored. 
 
 **Voltage regulator**: since many devices require a very precise amount of voltage, the regulator adjusts this so that it stays constant. This can be important whenever we change environment, have fluctuation wall voltage or the device needs more power. Such regulators use feedback in order to measure the output voltage, compare it with the desired voltage and then continuously adjust until they match. For a simple circuit like a lamp it will use a linear regulator to just gently resist excess voltage, while for a laptop a switching regulator is used where it can rapidly turn currents on or off and hence average it using for instance a capacitor.
-
-
-
-## From the grid to the wall plug 
-
-To bring this all together, we can now look what happens from the point the moving electrons leave the power station, to the point it comes out of my wall socket. First, we’ve seen that the AC type current is simply the electrons being pushed back and forth through a metal wire (conductor) at 50 times a second (50Hz here in Belgium). Inside the power plants, the generators are what is pushing the electrons back and forth (see Generation section), using high voltage to get the electrons over long distance efficiently. This is done using 3-phase AC, which just means there are three AC currents taking turns doing the push. This makes the grid have smoother and more constant power. So from the power plant to the transformer, there’s three live wires with electrons being pushed back and forth. 
-
-Somewhere in my neighborhood there is a transformer box lowering the voltage and outputting to 230V. As from this transformer, there’s a low-voltage delivery part and the three lines going from this box to my home, and then in my home as well, has three conductors, a live one, neutral one and an ‘earth’ one. The live wire is what carries 230V, the neutral wire is connected to the earth at the transformer, defining the voltage at zero so that the live wire has something to be measured against. This neutral wire isn’t without current, it just starts at zero at the transformer, but can be thought of as completing the circuit so that electrons from the live wire can flow back and forth (AC) .
-
-The earth wire on the other hand isn’t part of the electricity system and is just there for safety, it’s connected to a metal rod in the earth so that if something goes wrong (eg., casing gets damaged so that metal wire becomes live) the electrons have an escape into the soil. This will cause a very big current to go through that earth wire, which a breaker detects and immediately shuts off the circuit for. This also links to why birds can sit on the electricity wires and not get electrocuted, as to be electrocuted the electrons need a path to a lower voltage point such as neutral or ground. If you only touch one wire while not touching anything else (even the ground), electrons have nowhere to go so won’t move through you. 
-
-So the thick cable (with three types in) comes from the street transformer into my home and first encountering the meter,  which simply counts how much energy is used. After, it goes through the breaker panel of my home, which splits electricity into different circuits around the house (kitchen, living room, bathroom, etc.) and protects the house in case something goes wrong. If the breaker therefore goes off, it means there’s too many electrons trying to flow (high current) and the breaker flips and shuts of electricity. 
-
-Each room then has wires, again the three type of wires from before, coming from the breaker to the wall socket. So electrons get pushed through the live wire, travel through a device and then go back through the neutral wire to complete the loop. What then happens in my wall socket is nothing more than there just being three metal contact points, each connected to one of he wires. So in most instances there a wire carrying the AC push (live), one completing the loop (neutral) and one for safety (earth). Sockets with only two contact points (eg., lamp, TV, phone charger) therefore don’t have an earth wire, which can occur when a device is designed not to have exposed metal parts, or if it’s double insulated (as such the outside cannot become live if something breaks). 
