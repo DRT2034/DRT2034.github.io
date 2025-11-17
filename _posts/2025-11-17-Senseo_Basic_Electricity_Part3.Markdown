@@ -15,8 +15,3 @@ The earth wire on the other hand isn’t part of the electricity system and is j
 So the thick cable (with three types in) comes from the street transformer into my home and first encountering the meter,  which simply counts how much energy is used. After, it goes through the breaker panel of my home, which splits electricity into different circuits around the house (kitchen, living room, bathroom, etc.) and protects the house in case something goes wrong. If the breaker therefore goes off, it means there’s too many electrons trying to flow (high current) and the breaker flips and shuts of electricity. 
 
 Each room then has wires, again the three type of wires from before, coming from the breaker to the wall socket. So electrons get pushed through the live wire, travel through a device and then go back through the neutral wire to complete the loop. What then happens in my wall socket is nothing more than there just being three metal contact points, each connected to one of he wires. So in most instances there a wire carrying the AC push (live), one completing the loop (neutral) and one for safety (earth). Sockets with only two contact points (eg., lamp, TV, phone charger) therefore don’t have an earth wire, which can occur when a device is designed not to have exposed metal parts, or if it’s double insulated (as such the outside cannot become live if something breaks). 
-
-
-<div style="text-align: center;">
-  <img src="/assets/electricity.png" width="340">
-</div>
