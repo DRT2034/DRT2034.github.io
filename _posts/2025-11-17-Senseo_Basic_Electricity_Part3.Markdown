@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Senseo Basic Electricity 3: Grid to Wall Socket"
-date:   2025-11-17 10:43:21 +0200
+date:   2025-11-17 10:32:43 +0200
 categories: Opinion
 published: true
 ---
