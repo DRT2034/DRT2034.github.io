@@ -27,7 +27,7 @@ Only at the individual level are we able to battle those imposing forces, and de
 Apart from those philosophical rationalizations I've alluded to, I recently got curious and took apart my Senseo machine to see what’s inside. It turns out there are several components that lay at the basis of making me a cup in the morning. 
 
 <div style="text-align: center;">
-  <img src="/assets/SenseoMach.jpeg" width="340">
+  <img src="/assets/SenseoMach.jpeg" width="400">
 </div>
  
  I’d say there are six essential components, namely electricity, a printing plate, a boiler, a pump, a valve system and extraction chemistry. We'll start with electricity.
