@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "On dynamic thinking"
+title:  "On Dynamic Thinking"
 date:   2025-09-02 10:19:32 +0200
 categories: Opinion
 published: true
