@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Profit Paradox: Applied case of the Static thinking fallacy"
+title:  "The Profit Paradox: Applied Case of the Static Thinking Fallacy"
 date:   2025-11-08 17:56:30 +0200
 categories: Opinion
 published: true
