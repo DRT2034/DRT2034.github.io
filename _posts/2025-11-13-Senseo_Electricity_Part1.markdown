@@ -5,23 +5,6 @@ date:   2025-11-13 06:43:21 +0200
 categories: Senseo
 published: true
 ---
-{% if page.categories contains "Senseo" %}
-  <div class="series-box">
-    <strong>This post is part of the Senseo series.</strong>
-    <ol>
-      {% assign senseo_posts = site.categories.Senseo | sort: "date" %}
-      {% for p in senseo_posts %}
-        <li>
-          {% if p.url == page.url %}
-            <strong>{{ p.title }}</strong>
-          {% else %}
-            <a href="{{ p.url }}">{{ p.title }}</a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ol>
-  </div>
-{% endif %}
 
 Electricity is the most straightforward element, but essentially I could write a post on this topic in and of itself, purely for considering where it comes from and how to go from nothing to something. 
 

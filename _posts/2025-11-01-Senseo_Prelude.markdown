@@ -5,23 +5,6 @@ date:   2025-11-01 15:40:21 +0200
 categories: Senseo
 published: true
 ---
-{% if page.categories contains "Senseo" %}
-  <div class="series-box">
-    <strong>This post is part of the Senseo series.</strong>
-    <ol>
-      {% assign senseo_posts = site.categories.Senseo | sort: "date" %}
-      {% for p in senseo_posts %}
-        <li>
-          {% if p.url == page.url %}
-            <strong>{{ p.title }}</strong>
-          {% else %}
-            <a href="{{ p.url }}">{{ p.title }}</a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ol>
-  </div>
-{% endif %}
 
 A thought exercise I’ve been engaging in since I was a little boy is that of the time machine game: what if I was teleported back in time some 500 years, or better 5000 years? What exactly would I be able to produce that the people of that period didn’t know how to produce themselves. What would be my competitive advantage and how exactly am I a master of my own time period? 
 
