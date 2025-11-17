@@ -41,3 +41,7 @@ header {
   display: block;
   margin-bottom: 8px;
 }
+
+.rss-subscribe {
+  display: none;
+}
