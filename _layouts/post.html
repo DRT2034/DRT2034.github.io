@@ -7,7 +7,7 @@ layout: default
 
   {% if page.categories contains "Senseo" %}
     <div class="series-box">
-      <strong>This post is part of the Senseo series.</strong>
+      <strong>This post is part of the Senseo series:</strong>
       <ol>
         {% assign senseo_posts = site.categories.Senseo | sort: "date" %}
         {% for p in senseo_posts %}
