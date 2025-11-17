@@ -2,9 +2,27 @@
 layout: post
 title:  "Senseo Basic Electricity 2: Generation"
 date:   2025-11-16 05:43:21 +0200
-categories: Opinion
+categories: Senseo
 published: true
 ---
+{% if page.categories contains "Senseo" %}
+  <div class="series-box">
+    <strong>This post is part of the Senseo series.</strong>
+    <ol>
+      {% assign senseo_posts = site.categories.Senseo | sort: "date" %}
+      {% for p in senseo_posts %}
+        <li>
+          {% if p.url == page.url %}
+            <strong>{{ p.title }}</strong>
+          {% else %}
+            <a href="{{ p.url }}">{{ p.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+{% endif %}
+
 ## Hydroelectricity and Magnets 
 
 I think the most interesting question that may not be relevant to the Senseo machine is that of how electricity is harnessed from nature. I’d say the easiest way to do this would be to put a damn in a river and go with hydroelectricity. The idea here is that moving water, such has that coming down a dam, creates theoretical energy (kinetic energy) that can be harnessed. So what is done is that you might create a turbine where the water falling down and hits the blades, making it spin. This spinning turbine, being powered by nothing other than gravity, is connected to a generator. A generator is just as we’ve seen before with AC, with a coil of wire (in big loops) and a magnet. That magnet is attached to the rotation that occurs, and a changing magnetic field around the wire is created because of the spinning. And again a law of nature (electromagnetic induction) dictates that changing magnetic fields push electrons inside a wire, making it electricity. The coil in the generator is therefore connected to thick wires leaving the generators, which are in turn connected to the power lines we see in the streets. This same exact idea works also for wind turbines.

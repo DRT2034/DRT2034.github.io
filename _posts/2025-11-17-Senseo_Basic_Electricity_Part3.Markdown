@@ -2,9 +2,26 @@
 layout: post
 title:  "Senseo Basic Electricity 3: Grid to Wall Socket"
 date:   2025-11-17 5:32:43 +0200
-categories: Opinion
+categories: Senseo
 published: true
 ---
+{% if page.categories contains "Senseo" %}
+  <div class="series-box">
+    <strong>This post is part of the Senseo series.</strong>
+    <ol>
+      {% assign senseo_posts = site.categories.Senseo | sort: "date" %}
+      {% for p in senseo_posts %}
+        <li>
+          {% if p.url == page.url %}
+            <strong>{{ p.title }}</strong>
+          {% else %}
+            <a href="{{ p.url }}">{{ p.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+{% endif %}
 
 To bring it all together, we can now look what happens from the point the moving electrons leave the power station, to the point it comes out of my wall socket. First, we’ve seen that the AC type current is simply the electrons being pushed back and forth through a metal wire (conductor) at 50 times a second (50Hz here in Belgium). Inside the power plants, the generators are what is pushing the electrons back and forth (see Generation section), using high voltage to get the electrons over long distance efficiently. This is done using 3-phase AC, which just means there are three AC currents taking turns doing the push. This makes the grid have smoother and more constant power. So from the power plant to the transformer, there’s three live wires with electrons being pushed back and forth. 
 
