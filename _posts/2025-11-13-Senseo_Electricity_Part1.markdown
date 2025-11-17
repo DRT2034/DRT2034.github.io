@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  "Senseo Basic Electricity"
+title:  "Senseo Basic Electricity 1: Electrons"
 date:   2025-11-13 06:43:21 +0200
 categories: Opinion
 published: true
 ---
 
 Electricity is the most straightforward element, but essentially I could write a post on this topic in and of itself, purely for considering where it comes from and how to go from nothing to something. 
-
-## Electrons
 
 At its base, electricity is just moving electrons, which are negative electrically charged (as opposed to positive ones called protons) pieces of matter that are fundamental in the universe. These pieces of matter have likely existed since the big bang, and make up parts of the atom, which are the building blocks of everything around us, from hair, plastic, air all the way to our own human cells. 
 
@@ -61,21 +59,6 @@ This diode is in fact quite impressive physics at work. It is made of two types 
 **Voltage regulator**: since many devices require a very precise amount of voltage, the regulator adjusts this so that it stays constant. This can be important whenever we change environment, have fluctuation wall voltage or the device needs more power. Such regulators use feedback in order to measure the output voltage, compare it with the desired voltage and then continuously adjust until they match. For a simple circuit like a lamp it will use a linear regulator to just gently resist excess voltage, while for a laptop a switching regulator is used where it can rapidly turn currents on or off and hence average it using for instance a capacitor.
 
 
-## Generation 
-
-I think the most interesting question that may not be relevant to the Senseo machine is that of how electricity is harnessed from nature. I’d say the easiest way to do this would be to put a damn in a river and go with hydroelectricity. The idea here is that moving water, such has that coming down a dam, creates theoretical energy (kinetic energy) that can be harnessed. So what is done is that you might create a turbine where the water falling down and hits the blades, making it spin. This spinning turbine, being powered by nothing other than gravity, is connected to a generator. A generator is just as we’ve seen before with AC, with a coil of wire (in big loops) and a magnet. That magnet is attached to the rotation that occurs, and a changing magnetic field around the wire is created because of the spinning. And again a law of nature (electromagnetic induction) dictates that changing magnetic fields push electrons inside a wire, making it electricity. The coil in the generator is therefore connected to thick wires leaving the generators, which are in turn connected to the power lines we see in the streets. This same exact idea works also for wind turbines.
-
-<div style="text-align: center;">
-  <img src="/assets/HydroGenerator.png" width="340">
-</div>
-
-Another interesting concept that makes all of this work is the magnet itself. For what really is a magnet? It all starts at the point of atoms, which are made of a nucleus (protons and neutrons) and small electrons spinning around the nucleus. Everything we see is made of atoms. Now as seen before, the electrons are charged and moving and any moving charge creates a magnetic field around it. As such every electron acts like a miniature magnet in the atom. Now in most materials such as wood or copper, electrons are paired up in such a way that their magnetic field points in opposite directions, so when one electron’s field points north and the other’s south, they’ll cancel out with no net magnetism. 
-
-Now there are other materials (iron, nickel, cobalt) that have groups of atoms inside (domains) that naturally form and have huge amounts of electrons lined up together in the same direction so as to make magnetic fields. So each domain is it’s own magnet inside the metal. Now quite often in a material like iron, the domains point in random directions, and the metal isn’t magnetic overall as a result. But making magnetism is therefore the same as merely lining up these domains, which happens if we put a separate magnet next to it, the magnetic field makes the domains rotate and align in the same direction, making the iron have a north pole and south pole. So a magnet is physically just a piece of metal in which atomic magnetic fields are lined up. On the one end, the fields will point outwards (north pole) while on the other they’ll point inward (south pole). 
-
-Because magnets are in essence just spinning electrons aligned in certain directions, the logic of opposite or like charges attracting and repelling still holds. So when the south pole of one domain is close to the north pole of another, these opposites will attract. Now this might seem confusing since earlier it was said in the hair and comb example that there’s only a magnetic field when there motion in charged particles (=current magnetism), and if that motion stops there remains only an electric field. 
-
-There’s a built in exception however inside atoms, where electrons might not be traveling through space, they still spin around the nuclei making each electron behave like a tiny permanent magnet (=permanent magnets). No real magnetic field is created around the object with atoms in it, however, as these small magnetic fields from individual electrons point in random directions and cancel out. So there exist two separate sources of magnetism, one from moving charges, one inside atoms.
 
 ## From the grid to the wall plug 
 
