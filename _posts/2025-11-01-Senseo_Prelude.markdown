@@ -21,3 +21,13 @@ Now this specialization has a downside, one that Adam Smith warned about very cl
 Another great book I read where this sentiment is echoed is ‘On Liberty’ by John Stuart Mill, who writes: *“He who lets the world, or his own portion of it, choose his plan of life for him, has no need of any other faculty than the ape-like one of imitation. He who chooses his plan for himself, employs all his faculties. He must use observation to see, reasoning and judgment to foresee, activity to gather materials for decision, discrimination to decide, and when he has decided, firmness and self control to hold to his deliberate decision - Human nature is not a machine to be built after a model, and set to do exactly the work prescribed for it, but a tree, which requires to grow and develop itself on all sides, according to the tendency of the inward forces which make it a living thing”.*
 
 Only at the individual level are we able to battle those imposing forces, and despite the modern day consensus that individuals bear little responsibility for the way their lives turns out, it remains the foremost necessity for each one of us to become the captain of their ship, which entails digging into the working of all that is around us. 
+
+## The machine 
+
+Apart from those philosophical rationalizations I've alluded to, I recently got curious and took apart my Senseo machine to see what’s inside. It turns out there are several components that lay at the basis of making me a cup in the morning. 
+
+<div style="text-align: center;">
+  <img src="/assets/SenseoMach.jpeg" width="340">
+</div>
+ 
+ I’d say there are six essential components, namely electricity, a printing plate, a boiler, a pump, a valve system and extraction chemistry. We'll start with electricity.
