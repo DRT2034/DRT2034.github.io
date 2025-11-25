@@ -5,6 +5,8 @@ date:   2025-11-25 6:09:31 +0200
 categories: Senseo
 published: true
 ---
+## Big Picture 
+
 <div style="text-align: center;">
   <img src="/assets/SenseoOpen.jpeg" width="340">
 </div>
