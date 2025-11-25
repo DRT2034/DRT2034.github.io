@@ -13,7 +13,7 @@ published: true
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">
-The obscure white wire entering the side of the boiler and having a long metal pin to it, is the temperature sensor of the Senseo (See both picture on the right and open boiler in [Part 5]({% post_url 2025-11-25-Senseo-Boiler-P1 %})). NTC stands for Negative Temperature Coefficient thermistor. The PCB (control board) needs this pin in order for the boiler not to overheat (as it has some 1000-1500W). 
+The obscure white wire entering the side of the boiler and having a long metal pin to it, is the temperature sensor of the Senseo (See both picture on the right and open boiler in [Part 5]({% post_url 2025-11-25-Senseo_Boiler_P1 %})). NTC stands for Negative Temperature Coefficient thermistor. The PCB (control board) needs this pin in order for the boiler not to overheat (as it has some 1000-1500W). 
 
 Inside the metal pin is an NTC bead, which is made from a specially made ceramic consisting of several metal oxides. This special ceramic has the property that when getting hotter, resistance goes down, while if colder the resistance goes up (that’s what NTC means). The change in behavior by this material is predictable and measurable. 
 
