@@ -41,3 +41,22 @@ The tube we saw in the boiler-picture, however, isn’t what’s carrying the el
 My first question when learning about this Nichrome helping with resistance and resulting in heat was, “what about Ohm’s law then?” Since Ohm’s law shows this relation between resistance, voltage and current, doesn’t that cause issues for the electricity we’re connecting to this? 
 
 Well the idea of Ohm’s law is this. If we think of electricity as water flowing through a pipe, then the water flow (measured in ampere per seconds) is current (I), the pressure pushing the water is voltage (V) and the narrowness of the pipe is the resistance (R). Ohm’s law merely describes the relationship between these three: Voltage (push) = Current (flow) * Resistance (obstacle). Or turned around, current is voltage divided by resistance, meaning that more pressure results in more flow, but smaller pipe in less flow. Now if the wire is such that there’s a lot of resistance, such as Nichrome, the electrons move through and bump into atoms and vibrate as a result (=heating). Ohm’s law therefore just tells us what will happen and is used to predict how much current will flow through a wire, how much heat will be generated and so on.
+
+## Two terminals with red insulation 
+
+<div style="text-align: center;">
+  <img src="/assets/BoilerTop.jpeg" width="340">
+</div>
+
+We’ve already identified the two red insulated terminals on top, but when opening up the Senseo, it appears there is actually three wires attached to these. Apparently, being the responsible engineers that they are, they also provide the boiler of an earth wire, which we see to be the yellow/green one attached on the left. This is purely a safety wire, so that if something breaks and the boiler becomes ‘live’, the current goes through this one to the ground and the circuit of my kitchen will be shut off by the breaker. You can kind of see it in the picture, where this green/yellow wire is actually directly attached to the metal top, not to an extension of the terminals. 
+
+Then there’s also the live wire, which is the red one, and goes with high voltage AC (230V). As I show in the second picture, both the black and red wire come from the circuit board of the machine. So when the electricity enters the machine, it first goes through the relay (bridge controlling circuits) and then goes to the boiler, making it possible to have the user manipulate what happens when (more on this later). 
+
+<div style="text-align: center;">
+  <img src="/assets/SenseoPCB.jpeg" width="340">
+</div>
+
+The black wire is then the Neutral one, completing the circuit. Note that since these two wires are attached to separate terminals in order to complete the circuit, changing the terminal each is attached to won’t change anything, nothing will break or go wrong. The heater has no polarity (though there is a safety element apparently with the breaker being attached to the live side, so in terms of safety things will change). 
+
+A possible question here is why exactly the live wire needs to come from the panel control board (PCB) and not directly from the wall socket as it’s a separate high voltage circuit? I thought this might have been the case because the moment we turn on the device, we notice it starts heating. Nevertheless, when temperature reaches a certain threshold, or water is up, or even the fact that ‘on’ makes it heat, is all controlled by the PCB. So this red wire is attached to a relay, which is like a bridge that whenever the device rules that there needs to be warm water, connects the red wire to electricity. 
+
