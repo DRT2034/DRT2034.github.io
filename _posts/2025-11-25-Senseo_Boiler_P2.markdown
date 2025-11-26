@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Senseo Boiler: Sensing Temperature"
+title:  "Senseo Boiler 2: Sensing Temperature"
 date:   2025-11-25 6:30:31 +0200
 categories: Senseo
 published: true

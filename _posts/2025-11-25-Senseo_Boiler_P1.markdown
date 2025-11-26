@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Senseo Boiler: Heat and Electricity"
+title:  "Senseo Boiler 1: Heat and Electricity"
 date:   2025-11-25 6:09:31 +0200
 categories: Senseo
 published: true
