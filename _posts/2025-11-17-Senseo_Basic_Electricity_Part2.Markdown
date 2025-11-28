@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Senseo Basic Electricity 2: Generation"
+title:  "Senseo Electricity Basics 2: Generation"
 date:   2025-11-16 05:43:21 +0200
 categories: Senseo
 published: true

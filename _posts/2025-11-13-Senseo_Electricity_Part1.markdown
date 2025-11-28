@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Senseo Basic Electricity 1"
+title:  "Senseo Electricity Basics 1"
 date:   2025-11-13 06:43:21 +0200
 categories: Senseo
 published: true
