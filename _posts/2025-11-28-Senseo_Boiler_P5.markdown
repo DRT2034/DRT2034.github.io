@@ -6,7 +6,7 @@ categories: Senseo
 published: true
 ---
 
-## Outlet port toward brewing chamber 
+## Outlet Port Toward Brewing Chamber 
 
 We then lastly also have the stub that looks like a chimney (Nr. 2) in the picture at the beginning of [last post]({% post_url 2025-11-28-Senseo_Boiler_P4 %}). This isn’t a chimney, however, it’s the hole where the water leaves the boiler when it is boiling. It may not be visible in that picture, but you can look straight into the boiler through that hole. In the first picture in the boiler series, you can actually see that this is where the tubes towards the upper chamber are attached to the boiler (see below).
 
