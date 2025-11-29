@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "What is Glass?"
+date:   2024-10-02 15:40:21 +0200
+categories: Exploration
+published: true
+---
+[The following is a little blog I wrote before I set up this blog. Thought this might be a good place to consolidate these]
+
+It has dawned on me that a lot of my knowledge is really quite elementary. For instance, during lunch today, I was looking at my glass of water and couldn’t for the life of me come up with how I would make it myself. Of course, I realize that glass is made out of sand that is heated and after a process we suddenly have glass. But how exactly the sand goes from raw material to a glass with water in it, or better yet, the double or triple plated glass through which I stare at the sky late in the evening, is beyond me. I mean, surely it’s not as easy as heating up sand. How would glass then have any economic value?
+
+It appears that glass is made out of several key components, of which the main one is ‘quartz sand’, which would translate in Flemish to ‘zavel/kiezelzand’ (Silica - Silicon Dioxide SiO₂). Other than that, sodium carbonate (the soda crystals we use for cleaning) and calcium oxide (quicklime) are added as well as other chemicals such as lead oxide (in case the output is sparkling glass), lanthanum oxide (for eyeglass lenses) or iron (for heat absorbing glass/colored glass). The soda will make sure the temperature is lowered during the production so that the glass can be made energy efficiently, while the limestone helps stabilize the silica and make the glass more durable. 
+
+These days, some cullets, or recycled glass parts, might be added to the mix in order to lower the energy needed for melting the glass. 
+
+In its purest essence, though, glass is just Silicon Dioxide (sand) heated at around 1700°C. The individual grains we've all known and touched then melt and the molecules all flow together. This then becomes a transparant solid, which is glass. The other ingredients I mentioned above are then also thrown in the mix, both for energy efficiency and the type of use for the glass. 
+
+Now, what comes to my mind when reading this information is, what might I burn in order to get my mix to melt the way it needs to? Well, it turns out normal wood won’t make it, so using your BBQ might not be the best solution for this. That is because wood will burn at temperatures between 800 and 1000 °C at its highest. Now, you might also note that surely this all depends on the type of wood that you use and the conditions under which it takes place, such as a blazing fire which rages through a forest, or using some gasoline on a campfire. Unfortunately, it seems this is not the case, for even hardwoods, such as oak and maple, are woods that will only burn up to a temperature of 1200 °C, making it unfit for the task at hand. Even with added fuel, the (wood)fire will only be able to reach 1300 °C, while additionally adding costs and danger. 
+
+Now apparantly it's not the fuel (wood, coal etc.) that defines the heat we'd like, but the conditions. If we're able to trap heat in such a way that recirculates the energy, we can efficiently get to way higher temperatures. This is what's being done in modern-glassmaking. A sort of special furnace is used (nowadays gas or electric, not wood burning) that traps the heat well, and instead of letting it escape into the open air like a campfire, it recirculates it. The burners are then also oxygen enriched (same idea as putting a leaf blower at the bottom of a BBQ) which raise the flame temperature even more.
