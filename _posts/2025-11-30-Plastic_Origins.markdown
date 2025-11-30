@@ -10,12 +10,12 @@ While writing on the PCB Senseo section, I went back to an old text I wrote expl
 
 Leo Baekeland, a fellow Belgian, is actually the one who invented plastic. As with many of my recent posts, we’ll have to start from the ground up with atoms and molecules. When a group of atoms are together, we speak of a molecule. Every material is then made out of arrangements of molecules, such as wood, metal and water. Now when such molecules form long chains (like a rope or necklace), they’re called polymers (meaning ‘many parts’). Materials made out of such chains behave in a peculiar manner, they bend, squish and shape flexibly. That’s why these were called plastic, from the Greek plastikos (‘being able to be shaped’). 
 
+Before there was actual plastic, however, people used natural polymers such as rubber from rubber trees or shellac from insects. These were then very expensive and limited. This needs for something durable and cheap gave way to inventions, which is where Leo Baekeland came in. Leo was a chemist working on photo-graphics, having already invented the Velox photographic paper. Now in the early 1900’s with the advent of electricity and a need for light switches and insulators (protective casing to stop electrons flowing), materials being used most were wood and shellac. But wood burns and shellac was very expensive.
+ 
 <img src="/assets/Shellac.png"
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">
-Before there was actual plastic, however, people used natural polymers such as rubber from rubber trees or shellac from insects. These were then very expensive and limited. This needs for something durable and cheap gave way to inventions, which is where Leo Baekeland came in. Leo was a chemist working on photo-graphics, having already invented the Velox photographic paper. Now in the early 1900’s with the advent of electricity and a need for light switches and insulators (protective casing to stop electrons flowing), materials being used most were wood and shellac. But wood burns and shellac was very expensive. 
-
 Shellac, in fact, is the secretion coming from the lac insect. Just as humans produce sweat or earwax, this insect produces a sticky substance that hardens on tree (see picture). People would then scrape this casing of off the trees. 
 
 Baekeland wanted to find something that was cheaper, wouldn’t burn or conduct energy and could be molded into any shape. Chemists in that time period already knew that the mixing of the two molecules Formaldehyde (CH2O) and Phenol (C6H6O) resulted into an unpredictable sticky resin. The big problem was, it was impossible to control the outcome, sometimes it was hard and sometimes very liquid. What Baekeland then first built was a sort of pressure cooker, called the Bakelizer. 
