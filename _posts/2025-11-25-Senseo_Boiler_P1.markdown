@@ -8,12 +8,12 @@ published: true
 ## Big Picture 
 
 <div style="text-align: center;">
-  <img src="/assets/SenseoOpen.jpeg" width="340">
+  <img src="/assets/SenseoViz/4/SenseoOpen.jpeg" width="340">
 </div>
 
 This next chapter is one I’m very much quite interested in, as truly the only way I can imagine making water heat up is by creating a fire and putting a pot of water from a stream on it. 
 
-<img src="/assets/BoilerSenseo.png"
+<img src="/assets/SenseoViz/4/BoilerSenseo.png"
      width="180"
      align="right"
      style="margin: 0 0 1em 1em;">
@@ -23,7 +23,7 @@ But now to the real question, how do we go from cold water to warm or even hot w
 
 A typical problem with this method is that most energy that’s created gets lost, only a little touches the pot and even less results in accomplishing the goal of heating water (indirect heating). The goal is therefore to capture all that released energy. 
 
-<img src="/assets/Nichrome1.png"
+<img src="/assets/SenseoViz/4/Nichrome1.png"
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">
@@ -34,7 +34,7 @@ What therefore actually happens is, electricity (as AC) comes from the wall at 2
 
 This explains also why the Senseo has multiple power circuits. There is one high voltage AC circuit, going directly to the boiler (since it eats power), while the electrical parts such as PCB and microcontroller need a separate low voltage DC that’s controlled and gives 5V (or 12V). Depending on the Senseo model, the pump itself will either be also on the DC, or on a lower voltage AC (separate circuit). This is because the pump is an electromechanical device requiring control and timing.
 
-<img src="/assets/NichromeTube.png"
+<img src="/assets/SenseoViz/4/NichromeTube.png"
      width="180"
      align="right"
      style="margin: 0 0 1em 1em;">
@@ -47,7 +47,7 @@ Well the idea of Ohm’s law is this. If we think of electricity as water flowin
 ## Two terminals with red insulation 
 
 <div style="text-align: center;">
-  <img src="/assets/BoilerTop.jpeg" width="340">
+  <img src="/assets/SenseoViz/4/BoilerTop.jpeg" width="340">
 </div>
 
 We’ve already identified the two red insulated terminals on top, but when opening up the Senseo, it appears there is actually three wires attached to these. Apparently, being the responsible engineers that they are, they also provide the boiler of an earth wire, which we see to be the yellow/green one attached on the left. This is purely a safety wire, so that if something breaks and the boiler becomes ‘live’, the current goes through this one to the ground and the circuit of my kitchen will be shut off by the breaker. You can kind of see it in the picture, where this green/yellow wire is actually directly attached to the metal top, not to an extension of the terminals. 
@@ -55,7 +55,7 @@ We’ve already identified the two red insulated terminals on top, but when open
 Then there’s also the live wire, which is the red one, and goes with high voltage AC (230V). As I show in the second picture, both the black and red wire come from the circuit board of the machine. So when the electricity enters the machine, it first goes through the relay (bridge controlling circuits) and then goes to the boiler, making it possible to have the user manipulate what happens when (more on this later). 
 
 <div style="text-align: center;">
-  <img src="/assets/SenseoPCB.jpeg" width="340">
+  <img src="/assets/SenseoViz/4/SenseoPCB.jpeg" width="340">
 </div>
 
 The black wire is then the Neutral one, completing the circuit. Note that since these two wires are attached to separate terminals in order to complete the circuit, changing the terminal each is attached to won’t change anything, nothing will break or go wrong. The heater has no polarity (though there is a safety element apparently with the breaker being attached to the live side, so in terms of safety things will change). 

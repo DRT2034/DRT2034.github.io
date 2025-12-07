@@ -9,7 +9,7 @@ published: true
 ## NTC thermistor - metal pin entering side
 
 
-<img src="/assets/BoilerNTC.jpeg"
+<img src="/assets/SenseoViz/5/BoilerNTC.jpeg"
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">
@@ -49,7 +49,7 @@ Now each resistor converts electrical energy into heat, and the amount of energy
 
 We can use Ohm’s law to make this clearer: Current (I) = Voltage (V) / Resistance (R), or otherwise V= I * R. So if we have the same exact current flowing through both, then the resistance in one compared to the other determines the amount of voltage taken up by either.
 
-<img src="/assets/VoltageDivider.png"
+<img src="/assets/SenseoViz/5/VoltageDivider.png"
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">

@@ -8,7 +8,7 @@ published: true
 
 ## Bimetal thermal switch
 
-<img src="/assets/BoilerTopAnnotated.png"
+<img src="/assets/SenseoViz/7/BoilerTopAnnotated.png"
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">
@@ -20,7 +20,7 @@ The idea of a bimetallic strip is that there are two strips of different metals 
 
 Let’s again start with the physics. It turns out that when metals are heated, they expand, but different metals do so at different rates (expansion coefficients). This is because heat makes atoms (of which things are made up off) jiggle more, in turn pushing each other harder and farther apart. Now if the average distance between atoms gets bigger, the material as a whole stretches a little. The atoms are bound together by a spring-like force (interatomic bond strength), and depending on the stiffness of this ‘force’, a metal will expand more or less That’s the idea behind these expansion coefficients.
 
-<img src="/assets/BimetalStrip.png"
+<img src="/assets/SenseoViz/7/BimetalStrip.png"
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">
@@ -28,7 +28,7 @@ If we were to mount two metals with different expansion coefficients together, w
 
 This is what brings us the cylindrical disks. If we make this strip slightly hill-shaped (think Captain America’s shield), then being heated or not leads to a bi-stability state, where depending on the temperature it either pops outward or inward. That’s how this is manipulated in a way to pop under certain temperatures, by making it extra convex (hill shaped if looking at the outside) or less so. If heat is applied, the expanding metal that is on the inside of the strip will want to expand, but since the disc is already bended in the other direction, it results in stress being put in it while staying in the same shape. Whenever there’s enough stress (certain temperature), the disc flips into the other shape like a metal jelly jar clicking or umbrella inverting. Apologies for the bad quality drawing, it’s the best my webcam could provide at this hour. 
 
-<img src="/assets/BimetalStrip2.png"
+<img src="/assets/SenseoViz/7/BimetalStrip2.png"
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">

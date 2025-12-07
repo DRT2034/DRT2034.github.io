@@ -25,5 +25,5 @@ The way the machine decides how much goes into my cup is then determined by the 
 Now when we look at this close-up picture, the tube going upwards branches into two, one going to the brewing chamber, and the other being a vent tube. That vent tube serves a real purpose, but will be come back to in the valve system section. 
 
 <div style="text-align: center;">
-  <img src="/assets/MachBoilerCloseup.png" width="340">
+  <img src="/assets/SenseoViz/8/MachBoilerCloseup.png" width="340">
 </div>

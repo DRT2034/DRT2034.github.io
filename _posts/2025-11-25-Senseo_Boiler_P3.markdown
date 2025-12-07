@@ -18,14 +18,14 @@ When the NTC is warm, we again use the equation and see V-out = 5V * 2k/(10k+2k)
 
 We haven’t really seen this yet as it’s for one of the next sections, but the Senseo machine makes use of a microcontroller with 10-bit ADC, which reads 0-5V. Essentially this ADC just has the task of saying what fraction of the 5V it’s seeing. This voltage is expressed as a digital value, between 0 and 1023. What the control board then does is convert the V-out it got from the divider into the actual thermistor resistance using the inverse of the voltage divider equation (see equation below). 
 <div style="text-align: center;">
-  <img src="/assets/InverseVDEquation.png" width="250">
+  <img src="/assets/SenseoViz/6/InverseVDEquation.png" width="250">
 </div>
 
 By simple calculation for our example, we find for a warm boiler for instance the resistance of (10kΩ * 0.83V/(5V-0.83V)) = 1.99 kΩ (or 1990 ohms, same as the 2 kΩ from before). In reality, the voltage divider equation is used only in reverse, not forward as before. The controller directly reads the V-out voltage as a number between 0-1023 from the ADC, and then uses the inverse equation to transform this into resistance. The ADC knows how to read the voltage from V-out because it has a built in reference voltage and merely compares the two and outputs a digital value. The firmware essentially converts the ADC to V-out by (V-out = (ADC/1023)*V-ref). So with reference of 5V, an ADC read as 409, we find the 2V. This is then used in the inverse voltage divider equation to get the resistance. 
 
 Next, it turns that resistance into temperature, which can be done in several ways. The easiest is a temperature lookup table (contained by the firmware), which goes from resistance 10000 Ω being 25 °C to resistance 900 Ω being 90 °C. Now the Senseo doesn’t use this as it isn’t very accurate. It instead uses the Beta equation for this conversion, which also takes into account the material (used also in kettles, boilers, dishwashers etc.). It relates the temperature to the thermistor resistance by deriving exponential behavior of semiconductor conduction (which the NTC bead is). 
 <div style="text-align: center;">
-  <img src="/assets/BetaEqNTC.png" width="250">
+  <img src="/assets/SenseoViz/6/BetaEqNTC.png" width="250">
 </div>
 
 Beta: Is here actually just a constant, determined by the thermistor material (between 3000-4500K). 
@@ -43,7 +43,7 @@ In order to already have some context since these topics will only be thoroughly
 So what happens is that the microcontroller (the brain for which firmware is the memory) constantly runs a loop (see below) where it goes through all the steps for the boiler. There are then two main temperature thresholds, T_low and T-high, which form a band between them in order to have ON/OFF. So below T_low (≈85°C) the heater is ON ad the boiler is warmed up, while when above T_high (95°C), the heater is turned OFF. This is what’s called a hysteresis band, which implies that between T_low and T_high, the system doesn’t react to small changes and the output remains stable (no constant ON/OFF switching). This hysteresis band is the same concept used for the A/C and explains why cooling to 21°C in reality means that it only stops cooling at 19°C.
 
 <div style="text-align: center;">
-  <img src="/assets/MicrocontrollerNTCLoop.png" width="250">
+  <img src="/assets/SenseoViz/6/MicrocontrollerNTCLoop.png" width="250">
 </div>
 
 When I turn on my Senseo machine, therefore, what happens is that the water is cold, likely around 20°C, and the heater is turned on continuously. This because the microcontroller is running it’s loop of steps constantly (10-100x a second). As such, electrons flow through the Nichrome wire, but are resisted in such a way to cause heat release. The temperature touching the metal sleeve which the ceramic bead is in rises, eventually causing such low resistance that the microcontrollers reads the voltage divider and converts this to a temperature crossing 85-90°C. Whenever this happens, the heater is switched OFF, and the light I see on the frond becomes steady. If I then don’t press the button, eventually the constant loop detects a temperature that is again under the threshold, and starts heating again (or the machine falls out).

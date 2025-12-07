@@ -12,7 +12,7 @@ Leo Baekeland, a fellow Belgian, is actually the one who invented the first synt
 
 Before there was actual plastic, however, people used natural polymers such as rubber from rubber trees or shellac from insects. These were then very expensive and limited. This needs for something durable and cheap gave way to inventions, which is where Leo Baekeland came in. Leo was a chemist working on photo-graphics, having already invented the Velox photographic paper. Now in the early 1900’s with the advent of electricity and a need for light switches and insulators (protective casing to stop electrons flowing), materials being used most were wood and shellac. But wood burns and shellac was very expensive.
  
-<img src="/assets/Shellac.png"
+<img src="/assets/Plastic/Shellac.png"
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">
@@ -20,7 +20,7 @@ Shellac, in fact, is the secretion coming from the lac insect. Just as humans pr
 
 Baekeland wanted to find something that was cheaper, wouldn’t burn or conduct energy and could be molded into any shape. Chemists in that time period already knew that the mixing of the two molecules Formaldehyde (CH2O) and Phenol (C6H6O) resulted into an unpredictable sticky resin. The big problem was, it was impossible to control the outcome, sometimes it was hard and sometimes very liquid. What Baekeland then first built was a sort of pressure cooker, called the Bakelizer. 
 
-<img src="/assets/Bakelizer.png"
+<img src="/assets/Plastic/Bakelizer.png"
      width="150"
      align="right"
      style="margin: 0 0 1em 1em;">
@@ -29,5 +29,5 @@ The idea was to control pressure and high heat , and by placing these elements i
 So when the steam comes into the outer chamber and condenses, it releases heat into the wall, and in turn heats the inner chamber. Now what Baekeland was able to do here is standardize the heating process for those two elements, and as a result created bakelite, which was the first synthetic plastic. This product was a hard, heat-resistant, moldable and electrically insulating. It was moldable in the sense that it could be poured into a mold and create shapes with it before it fully hardened. In essence, manufacturing was changed forever. One such application was the casing of this table radio depicted hereunder. 
 
 <div style="text-align: center;">
-  <img src="/assets/EmersonTableRadio.png" width="340">
+  <img src="/assets/Plastic/EmersonTableRadio.png" width="340">
 </div>

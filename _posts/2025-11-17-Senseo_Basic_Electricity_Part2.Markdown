@@ -12,7 +12,7 @@ I think the most interesting question that may not be relevant to the Senseo mac
 
 
 <div style="text-align: center;">
-  <img src="/assets/HydroGenerator.png" width="340">
+  <img src="/assets/SenseoViz/2/HydroGenerator.png" width="340">
 </div>
 
 Another interesting concept that makes all of this work is the magnet itself. For what really is a magnet? It all starts at the point of atoms, which are made of a nucleus (protons and neutrons) and small electrons spinning around the nucleus. Everything we see is made of atoms. Now as seen before, the electrons are charged and moving and any moving charge creates a magnetic field around it. As such every electron acts like a miniature magnet in the atom. Now in most materials such as wood or copper, electrons are paired up in such a way that their magnetic field points in opposite directions, so when one electron’s field points north and the other’s south, they’ll cancel out with no net magnetism. 
@@ -30,7 +30,7 @@ Aside from generators, which move electrons by moving magnets, another major way
 To go a bit deeper into this, we start with going over the basics of chemistry. An atom is the basic building block of everything, like hair or a watch, and is made of protons (+) and neutrons in the core, and electrons moving around it. Molecules, on the other hand, are merely groups of atoms stuck together, such as water, which is 2 hydrogen atoms and an oxygen atom. As such a battery electrolyte (chemical in the middle) is just molecules made from atoms. Next to these, ions are also elementary to the process. an ion is quite easy to understand, an atom has both protons (+) and electrons (-), and equally as much of both so that it’s neutral. Now with an atom type that likes to lose (or gain) its electrons, having actually lost (gained) them makes the charge of the atom not neutral anymore, and such a charged atom is an ion.
 
 <div style="text-align: center;">
-  <img src="/assets/Molecule.png" width="340">
+  <img src="/assets/SenseoViz/2/Molecule.png" width="340">
 </div>
 
 Now it is in the nature of some atoms to want to shed their electrons (phenomenon called electronegativity). An atom like zinc (Zn) wants to get rid of its outer electrons, while atoms like copper (Cu) or oxygen (O) really wants extra electrons. So in batteries the negative side has a material like zinc, while the positive holds a material like copper. Because there’s these types of material creating imbalance in electron amounts, voltage is created (how strong electrons are pushed or pulled). 
@@ -59,7 +59,7 @@ This summarizes the various ways a battery gets used up: copper ions from the el
 Those reactions causing the battery to die are never going to be undone unfortunately. What a rechargeable battery then does, is choosing materials that do allow for the chemistry to be reversed (batteries are made of loads of materials other than zinc and copper). In such batteries, nothing dissolves permanently into the electrolyte, no atoms get used up (such as zinc), and ions are moving back and forth instead of being destroyed and the structure of the electrodes (the metals) remains intact. What’s essentially being done is that ions are being stored inside the electrode during the design, so no ions are being created or destroyed in the battery. The ions then just simply move back and forth between electrodes (Anode and Cathode). 
 
 <div style="text-align: center;">
-  <img src="/assets/LithiumPhoneB.png" width="340">
+  <img src="/assets/SenseoViz/2/LithiumPhoneB.png" width="340">
 </div>
 
 This can best be explained at the hand of the most common rechargeable battery we use today, which is lithium ion (our phones). Such a battery has graphite (layers of carbon) as Anode, lithium metal oxide as Cathode, and lithium salt in organic solvent as electrolyte. So quite a different chemistry than the zinc copper battery we saw earlier. The ions that are stored and moving between sides is then lithium ion (Li⁺). Now the main point with this type of battery is that the metals don’t dissolve and the electrolyte isn’t used up, the lithium ions are just moving between them. While using a device, the battery has electrons going through the wire and ions going through the electrolyte, the ions moving out of the carbon layers (C–Li→C+Li⁺+e⁻) where only carbon stays behind, and into the lithium metal oxide (LiCoO₂+Li⁺+e⁻→Li₂CoO₂) which just absorbs it without changing structure. 
@@ -79,5 +79,5 @@ To have extra clarity, it must be pointed out that electrons don’t flow based 
 Something that’s actually quite interesting is, the charging rate occurs because of the voltage difference between the battery and the charger. If my battery is at 50% and has 3.6V going on, while at 0% it only has 3V going on, that means that at lower percentages of the battery, there’s a bigger voltage difference between the battery and the charger, making it charge faster in such a state than a nearly full state. This explains why charging from 90 to 100% takes so long. No such asymmetry exists while the battery is discharging. 
 
 <div style="text-align: center;">
-  <img src="/assets/LithiumChem.png" width="340">
+  <img src="/assets/SenseoViz/2/LithiumChem.png" width="340">
 </div>
