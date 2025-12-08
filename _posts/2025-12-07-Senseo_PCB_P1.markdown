@@ -9,7 +9,7 @@ published: true
 ## Bits and pieces 
 
 <img src="/assets/SenseoViz/4/SenseoPCB.jpeg"
-    width="150"
+    width="250"
     align="right"
     style="margin: 0 0 1em 1em;">
 Let’s now start with arguably the most difficult sections, the ones exploring printed circuit (or wiring) boards. In it’s essence, it functions as a fixed path for components to have connections to their counterparts. Instead of having wires connect the components electrically, the PCB does it via copper pathways. So most of the board is insulated, remember from the boiler pipe that this refers to materials not allowing electrons to flow. Certain specifically directed tracks on the board are then made of copper to permit that flow.
