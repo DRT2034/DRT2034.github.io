@@ -5,7 +5,7 @@ date:   2025-12-13 05:30:21 +0200
 categories: Senseo 
 published: true
 ---
-We’ve now seen the most basic version of logic gates, RTL. The main idea there was that transistors are turned ON when high input is applied to the gate, resulting in a connection between drain and source and current being conducted (let through). Resistors then form the base of creating the logic gates. The inefficiencies lie mainly in the use of current to switch which wastes power, not scaling well (need lots of resistors) and having a low noise margin (meaning they easily turn ON).
+We’ve now seen the most basic version of logic gates, RTL. The main idea there was that transistors are turned ON when high input is applied to the gate, resulting in a connection between drain and source and current being conducted (let through). Resistors then form the base of creating the logic gates. The inefficiencies lie mainly in the use of current to switch which wastes power, not scaling well (need lots of resistors) and having a low noise margin (meaning small voltage fluctuations can be misinterpreted as logic levels).
 
 Complementary MOS (CMOS) logic uses MOSFET transistors in a complementary fashion. We’ve used MOSFET’s quite a bit to explain things, as they’re modern and the logic is the same, but haven’t yet explored what they truly are. 
 
