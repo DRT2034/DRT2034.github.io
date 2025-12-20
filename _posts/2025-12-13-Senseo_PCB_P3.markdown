@@ -9,7 +9,7 @@ We’ve now seen the most basic version of logic gates, RTL. The main idea there
 
 Complementary MOS (CMOS) logic uses MOSFET transistors in a complementary fashion. We’ve used MOSFET’s quite a bit to explain things, as they’re modern and the logic is the same, but haven’t yet explored what they truly are. 
 
-MOSFET stands for Metal Oxide Semiconductor Field Effect Transistor. We’ve seen semiconductors before [LINK HERE], they’re just special materials like silicon that allow conduction or insulation depending on conditions. Oxide is a very thin insulation layer, while a piece of metal acts as a control electrode. The word Field comes from the fact that an electric field (voltage) controls whether the transistors switches on or off. So it’s a long name but a straightforward one. 
+MOSFET stands for Metal Oxide Semiconductor Field Effect Transistor. We’ve seen [semiconductors]({% post_url 2025-11-25-Senseo_Boiler_P3 %}) before, they’re just special materials like silicon that allow conduction or insulation depending on conditions. Oxide is a very thin insulation layer, while a piece of metal acts as a control electrode. The word Field comes from the fact that an electric field (voltage) controls whether the transistors switches on or off. So it’s a long name but a straightforward one. 
 
 <img src="/assets/SenseoViz/13/MOSFETsymbol.png"
     width="230"
