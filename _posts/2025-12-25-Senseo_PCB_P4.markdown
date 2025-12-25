@@ -30,19 +30,17 @@ Now these XOR and AND gates are merely the voltage classifiers we’ve seen earl
 
 Binary addition, such as in computers, produces two outputs out of inputs A and B: a sum bit (represented by XOR) and a carry bit (AND). These gates express the independent logical fact of the situation of A and B. These gates are then placed in a circuit so that we can have both facts (sum and carry) at the same time. Two wires go from A and B and in a parallel manner: 
 
-A ─┬─> XOR ──> Sum
-   └─> AND ──> Carry
-B ─┘
+<div style="text-align: center;">
+  <img src="/assets/SenseoViz/14/HalfAdder.png" width="340">
+</div>
 
 This makes it a ‘half’ adder and essentially tries to answer two questions (see truth table), whether the voltages are different (XOR) and whether both voltages are high (AND). By having the wires to these gates in parallel, both can be answered and serve to decompose the relation of A with B. 
 
 From this we can go to the **full adder**, because with binary addition when we add multi-bit numbers, each bit position must also accept a carry from the previous position. In a full adder, we then have the sum being the bit that stays in position, and the *carry out* which is the bit that moves to the next position. As such we have A + B + Carry-in —> (sum, carry-out). Remember the addition of 156 and 155, when we get to the sum of 5 and 5 in the middle, we also have a carry-in from before so must take this into account. 
 
-A ─┬─> XOR ──┬─> XOR ──> S
-   │   │
-B ─┘   └─> AND ──┐
-                 ├─> OR ──> Cout
-Cin────> AND ────┘
+<div style="text-align: center;">
+  <img src="/assets/SenseoViz/14/FullAdder.png" width="340">
+</div>
 
 In physical terms this carry-in is just a wire coming from the previous stage. You see, in practice, numbers are often represented by multiple bits. A single bit would only be able to take on two values (that we conceptually interpret from it), namely yes/no, 1/0 etc. Now with multiple bits, a general rule is that n bits translate into 2^n values. A two-bit number will therefore be able to take on 4 values: 0 (00), 1 (01), 2 (10), 3 (11). 
 
@@ -81,10 +79,10 @@ On the other inverter’s output node, Q̅, we add a symmetric transistor. So we
 
 Visually, such an inverter get looks as follows:
 
-VDD - PMOS -output- NMOS - GND    	—> Both inputs connected to other Inverter’s output 
-			  │
-		      └─> NMOS (R or S) - GND
-              
+<div style="text-align: center;">
+  <img src="/assets/SenseoViz/14/FeedbackInv.png" width="340">
+</div>
+
 Because the output is just the metal wire between the two transistors, where we could attach a multimeter and measure the voltage, we can also just attach another transistor to it as well. This other NMOS transistor can then easily be attached to an outside input, and bring the inverter’s output to ground when we choose. Now if PMOS and R/S are on, there is briefly a short circuit, but CMOS inherently has it so that the feedback turns the PMOS off. 
 
 SR latches are often built in a slightly different manner, however, since we might want to actively  pull-up the outcome’s writing instead of pulling down always. We still have two cross-couples inverters A and B which already have memory and store bits. For a canonical SR latch people then usually cross couple the NOR gate we’ve seen before, as these inherently contain pull-up and pull down without additional forces. However, while still interesting, we’ve got the gist of the SR latch idea. 
