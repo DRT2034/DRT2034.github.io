@@ -20,7 +20,7 @@ Now this specialization has a downside, one that Adam Smith warned about very cl
 
 Another great book I read where this sentiment is echoed is ‘On Liberty’ by John Stuart Mill, who writes: *“He who lets the world, or his own portion of it, choose his plan of life for him, has no need of any other faculty than the ape-like one of imitation. He who chooses his plan for himself, employs all his faculties. He must use observation to see, reasoning and judgment to foresee, activity to gather materials for decision, discrimination to decide, and when he has decided, firmness and self control to hold to his deliberate decision - Human nature is not a machine to be built after a model, and set to do exactly the work prescribed for it, but a tree, which requires to grow and develop itself on all sides, according to the tendency of the inward forces which make it a living thing”.*
 
-Only at the individual level are we able to battle those imposing forces, and despite the modern-day consensus that individuals bear little responsibility for the way their lives turn out, it remains the foremost necessity for each of us to become the captain of our ships, which entails digging into the workings of all that is around us. 
+Only at the individual level are we able to battle those imposing forces, and despite the modern-day consensus that individuals bear little responsibility for the way their lives turn out, it remains the foremost necessity for each of us to become the captains of our ships and remain the masters of our souls, as W. E. Henley would say. Naturally, this entails digging into the workings of all that is around us. 
 
 ## The machine 
 
