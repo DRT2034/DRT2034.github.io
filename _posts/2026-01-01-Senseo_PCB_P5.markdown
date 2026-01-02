@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PCB Fundamentals 4: D-latch"
-date:   2026-01-01 07:07:00 +0200
+date:   2026-01-02 07:07:00 +0200
 categories: Senseo 
 published: true
 ---
@@ -59,7 +59,7 @@ Vth: a threshold voltage, which is a device property (between 0.3-0.7V) and is t
 
 Now that this is clear, we can see how a MOSFET switch truly turns on for *pass transistors* such as in the transmission gate. Caveat here: for the logic inverter with transistors on it, nothing about this threshold-loss applies in a problematic way which is why we just need NMOS for pull-down and PMOS for pull-up. 
 
-For such a pass NMOS for instance, its source and drain are attached to input (D) and output (where its output is actually attached to the input of the inverter), while gate is attached to the Enable signal. To be clear, it isn’t attached to power, but we say that if the transistor is fully on, EN=1 and therefore EN ≈ VDD. So we say VG = VDD even though it’s not truly attached to VDD. 
+For such a pass NMOS for instance, its source and drain are attached to input (D) and output (where its output is actually attached to the input of the inverter), while gate is attached to the Enable signal. To be clear, it isn’t attached to power, but we say that if the transistor is fully on, EN = 1 and therefore EN ≈ VDD. So we say VG = VDD even though it’s not truly attached to VDD. 
 
 For NMOS in the transmission gate to turn on (remember NMOS = 1 if input 1), the voltage difference between gate and source (VGS) must exceed threshold voltage. Now in the scenario where VA (D) is high (1), we see that just like we said above, VA is supposedly equal to VDD. In such a case, VA = VDD and VG (gate) = VDD. As a result, VGS = VG - VB (VS) = VDD - 0 and VGS is as such above the threshold voltage of 0.3-0.7, as it’s fully 1. Now in the course of time  because NMOS is on, charge flows from A to B which raises VB (output), such that VGS = VG - VB = VDD - VB. As VB increases (by current flowing to B) VGS decreases and eventually VGS = Vth. When this occurs the channel can no longer be sustained and NMOS turns off. This is what is meant by saying NMOS passes weak 1 in the above explanation on transmission gates. This doesn’t occur to the inverter, as there the NMOS is fixed to GND so the output cannot approach VG and consequently NMOS never passes high voltage. 
 
