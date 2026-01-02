@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PCB Fundamentals 4: D-latch"
+title:  "PCB Fundamentals 5: D-Latch"
 date:   2026-01-02 07:07:00 +0200
 categories: Senseo 
 published: true
