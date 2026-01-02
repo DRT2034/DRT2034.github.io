@@ -31,13 +31,13 @@ Now it’s all about threshold voltages in the end. When EN=1, the transistors a
 If you feel like you’re getting dizzy reading all this, imagine what it’s like writing it. Here I am, on my probably 3th or 4th blog discussing inverters as VDD-PMOS-output-NMOS-GND, thinking this is a clean and separate path of MOSFET transistors. In reality, the drain and source of the PMOS and NMOS are indeed on the same wire, where the middle can be used as output node, but what also needs to be understood is that the inputs, the gate pins of these MOSFET’s, **are actually wired together**. So when we talk about input, it really is just a node like the output. The X I mentioned really is just one X wire. 
 
 <div style="text-align: center;">
-  <img src="/assets/SenseoViz/15/Inverter3D.jpg" width="340">
+  <img src="/assets/SenseoViz/15/Inverter3D.JPG" width="340">
 </div>
 
 On a visual portraying the conduction paths, this will never come through, but it’s a very important part to see and understand. The view we must then get is that with this memory block (2 cross couples inverters - or NAND, or NOR gates), we have that inverter A’s output has a wire going to the input node (1 single node) of inverter B. This input influences B’s output, where a wire goes to A’s input node. Then at A’s input node X, we have both this wire coming from B’s output, but also a connection to D via a transmission gate. This transmission gate is then again a PMOS and NMOS, whose drains are attached to a wire which attaches to input X. These two inverters are parallel and their sources (source and drain are interchangeable here) are both attached to wire D. The enable EN wire comes from a clock and goes to NMOS’ gate pin, but also gets attached a very small inverter and goes to PMOS’ gate pin. There’s no shortcut because neither is attached to VDD or GND. That’s the full picture here. 
 
 <div style="text-align: center;">
-  <img src="/assets/SenseoViz/15/Dlatch.jpg" width="340">
+  <img src="/assets/SenseoViz/15/Dlatch.JPG" width="340">
 </div>
 
 Aside on threshold-loss in transmission gate:
