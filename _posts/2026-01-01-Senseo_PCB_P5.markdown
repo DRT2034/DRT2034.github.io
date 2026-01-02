@@ -42,20 +42,23 @@ On a visual portraying the conduction paths, this will never come through, but i
 
 Aside on threshold-loss in transmission gate:
 
-Now there’s been a question on my mind when going through this, which is why we need both PMOS and NMOS in the transmission gate, and sure I answered this saying the one passes strong 1’s and the other strong 0’s, but truly why is this? The answer to this lies in the inner workings of how these CMOS transistors work (as already [partly detailed before]({% post_url 2025-12-13-Senseo_PCB_P3 %})), which is essentially through threshold logic. To explain this, I must explain some of the names used: 
+Now there’s been a question on my mind when going through this, which is why we need both PMOS and NMOS in the transmission gate, and sure I answered this saying the one passes strong 1’s and the other strong 0’s, but truly why is this? The answer to this lies in the inner workings of how these CMOS transistors work (as already [partly detailed before]({% post_url 2025-12-13-Senseo_PCB_P3 %})), which is essentially through threshold logic. To explain this, I must explain some of the names used:
+
 External power related: 
-VDD: the positive supply voltage of the chip (often DC 1.2-5V)
-GND: ground reference of the chip (0V)
+- VDD: the positive supply voltage of the chip (often DC 1.2-5V)
+- GND: ground reference of the chip (0V)
+
 Node voltages (measured against GND): 
-VG: voltage at gate terminal of MOSFET
-VS: voltage at source terminal
-VD: voltage at drain terminal 
-VA: voltage on input node (on the transmission gate, this is D coming in)
-VB: voltage on output node (“, the wire attached to output node of inverter)
+- VG: voltage at gate terminal of MOSFET
+- VS: voltage at source terminal
+- VD: voltage at drain terminal 
+- VA: voltage on input node (on the transmission gate, this is D coming in)
+- VB: voltage on output node (“, the wire attached to output node of inverter)
+
 Derived voltages (difference between terminals):
-VGS = VG-VS: voltage difference between gate and source (control voltage for NMOS)
-VSG = VS - VG: same exact idea but for PMOS 
-Vth: a threshold voltage, which is a device property (between 0.3-0.7V) and is the minimum gate to channel voltage needed to sustain a conducting channel. Comes from the doping process and thickness of the oxide. 
+- VGS = VG-VS: voltage difference between gate and source (control voltage for NMOS)
+- VSG = VS - VG: same exact idea but for PMOS 
+- Vth: a threshold voltage, which is a device property (between 0.3-0.7V) and is the minimum gate to channel voltage needed to sustain a conducting channel. Comes from the doping process and thickness of the oxide. 
 
 Now that this is clear, we can see how a MOSFET switch truly turns on for *pass transistors* such as in the transmission gate. Caveat here: for the logic inverter with transistors on it, nothing about this threshold-loss applies in a problematic way which is why we just need NMOS for pull-down and PMOS for pull-up. 
 
