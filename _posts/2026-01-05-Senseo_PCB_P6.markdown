@@ -3,7 +3,7 @@ layout: post
 title:  "PCB Fundamentals 6: Clocks & Flip-Flops"
 date:   2026-01-05 06:38:00 +0200
 categories: Senseo 
-published: true
+published: false
 ---
 
 We’ve now seen quite a few basics, from combinatorial logic where basic circuits create a stable equilibrium dependent on current states, to memory and the way latches are used to overwrite it. Latches were the way we could choose which value to freeze and store for later. Now as we saw at the end of last blog, the insufficiency of latches comes from the lack of controlled progression, as they keep copying as long as the enable wire allows them access to the memory block. What we’d instead like is a system that changes in clean and countable steps, and not as long as signals are allowed to flow. Because of this insufficiency, we had the problem that the outcome was mainly dependent on physics details and not logic structure itself. 
