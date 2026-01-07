@@ -24,5 +24,18 @@ How do we do this? Well very simply, we attach the wire coming from the crystal�
 
 Essentially, the clock is the first element seen by power in the microcontroller. When power is applied, the oscillator directly starts oscillating, which spreads the clock signal then through the chip and on each clock edge the flip flop updates (as well as other elements we’re not going to put under a microscope) and between clock edges we then have that combinatorial logic settles and no memory is allowed to change. As such we have compute - freeze - compute - freeze 
 
-We then also have **flip-flops** as essential upgrades to force change only once per cycle. With the D-Latch we had the problem that memory could keep changing throughout one cycle as long as there was transparency (EN on). Now a D flip flop is essentially a tiny circuit copying one wire (D) into the memory cell exactly once, when the clock edge happens, and then refuses to change until the next edge. So it samples once and then holds firm (no leakage). Now physically it’s built from two D-latches, inverters, transmission gates and the clock wire.
+We then also have **flip-flops** as essential upgrades of the d-latch to force change only once per cycle. With the D-Latch we had the problem that memory could keep changing throughout one cycle as long as there was transparency (EN on). Now a D flip flop is essentially a tiny circuit copying one wire (D) into the memory cell exactly once, when the clock edge happens, and then refuses to change until the next edge. So it samples once and then holds firm (no leakage). Now physically it’s built from two D-latches, inverters, transmission gates and the clock wire.
 
+Now when we talked about the D-latch earlier, we actually referred to the cross coupled inverters plus the transmission gate (something allowing transparency at times), it was the whole block. For the flip-flop we can imagine the big picture to look like
+
+<div style="text-align: center;">
+  <img src="/assets/SenseoViz/16/Dflipflop.png" width="340">
+</div>
+ 
+<img src="/assets/SenseoViz/16/Dlatch2.png"
+    width="230"
+    align="right"
+    style="margin: 0 0 1em 1em;"> 
+Where each latch block has a cross coupled inverter (memory) and a transmission gate. Essentially we have two versions of the figure I drew earlier attached to one another. Both A and B are full latches, with the difference when they’re allowed to change. So essentially in this view, which is getting quite intricate, we have our information wire D coming to the transmission gate of latch A just as with the D-latch. Then a metal wire is attached to the output node of latch A (Q or Q̅) and goes to latch B’s transmission gate, which has not D wire but just the wire coming from A. And then B is also again just the D-latch from before. The only other difference, as my little diagram indicated, is that the enable (EN) signal wires are replaced now with clock edges CLK and ¬CLK (‘not CLK’), but functionally the idea remains the same: CLK = A, latch A is transparent, 0 it holds; while for ¬CLK there’s again an inverter attached to CLK, so when CLK = 0, ¬CLK = 1 and vice versa. 
+
+Now we also see that when latch A is open (CLK), B is closed (¬CLK), meaning that there’s never a moment when D coming into the flip flop and the output Q are fully connected. This is why data cannot just flow through as before, and only one transfer happens per clock edge. Really quite clever. So A captures the data first, B captures that capture, and then holds it for the rest of the cycle. The output of the second latch is then the architectural state (Q). So what see finally is our signal D being allowed entry when the clock edge is on CLK = 1, and then when the clock edge turns off, that signal gets access to latch B, and Q holds the new value. One state change per cycle is achieved. 
