@@ -5,7 +5,6 @@ date:   2025-11-01 15:40:21 +0200
 categories: Senseo
 published: true
 ---
-
 A thought exercise I’ve been engaging in since I was a little boy is that of the time machine game: what if I was teleported back in time some 500 years, or better 5000 years? What exactly would I be able to produce that the people of that period didn’t know how to produce themselves, what would be my competitive advantage and how exactly am I a master of my own time period? 
 
 This follows from a conversation I often have with myself: We often take for granted the devices we use on a daily basis, such as phones, laptops, coffee machines, refrigerators and so on. Which of those modern day devices do you know thoroughly enough to reproduce on your own, with nothing other than raw materials? Do you even know which raw materials you’d need in order to get started? 
