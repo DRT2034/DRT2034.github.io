@@ -3,7 +3,7 @@ layout: post
 title:  "PCB Microcontroller Subsystems: CPU core"
 date:   2026-01-10 06:38:00 +0200
 categories: Senseo 
-published: false
+published: true
 ---
 
 ### Microcontroller on PCB layout
