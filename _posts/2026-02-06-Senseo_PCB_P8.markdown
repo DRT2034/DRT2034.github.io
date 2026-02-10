@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PCB Microcontroller Subsystems: GPIO - 1"
+title:  "PCB Microcontroller Subsystems: GPIO"
 date:   2026-02-06 06:38:00 +0200
 categories: Senseo 
 published: true
