@@ -59,3 +59,60 @@ So what happens is that we have our flip flop, which is just two cross-coupled i
 The natural solution, however, is to just use a second flip flop and make the synchronization process a synchronized chain. Our first flip flop might go metastable, but as long as it settles before the next clock edge sends the bit into the second flip flop, we’ll get a valid bit out of the second one. The probability of the state not settling before that edge follows an exponential distribution (see probability density function on the right - disregard text). 
 
 Once the bit comes out of the second flip flop, it’ll only change on the clock edge and be fully synchronous to the other parts of the MCU. 
+
+**IDR v ODR**
+
+As you’ve likely come to realize by now, the GPIO is used for both input and output of the CPU. As such some components are specifically for the input, while others specifically for the output. Such is the case for the input data register (IDR) and the output data register (ODR). These aren’t the same component, and are used for completely different tasks. 
+
+The **IDR** is used for input. We saw that the Schmitt trigger is used to capture noisy voltage and put out a clean 0 or 1 that isn’t jittery. The subsequent flip flops (synchronizers) then take these bits and turn them into nicely controlled and timed logic states the CPU can work with. The following stop in for the incoming signals is then the input data register. 
+
+We’ve seen registers before in the CPU section, they’re essentially just a group of D flip flops sharing a same clock where the bit is stored in the latches. It might not seems obvious what the idea of an IDR is based on this, but essentially what it tries to solve is an architectural problem. The CPU cannot read random internal wires, such as the one coming from the synchronizers that changes every clock edge but isn’t part of anything. CPU’s instead read registers mapped into its address space. 
+
+Now what does “mapped into its address space” mean? Formally the address space is the set of all numeric addresses the CPU knows how to talk to. There’s a lot of these, and they’ll look like 0x00000000, 0x00000004, etc. Which has the idea that if the CPU wants data, instead of saying “give me RAM”, it just sats “read from address X”, or “write value y to address Z”. 
+
+The output of this IDR is connected to the internal data bus. These buses, as we saw in the CPU section, are just wires connected together into metal routings. It’s what connects things, but at the same time it’s also a shared communication structure (with timing rules and so on).   
+
+Now this IDR has some great advantages. The synchronizer output isn’t architecturally visible, addressable by the CPU, nor timing guaranteed for the reading. This is all fixed by the IDR. The synchronizer ensures the incoming value is on the same clock timing, whereas the IDR ensures architectural visibility and bus protocol compliance. 
+
+**ODR** on the other hand works in reverse. When for instance the CPU wants to turn on the boiler enable, it cannot sit around and wait for it to happen while driving the wire. The CPU executes instructions and moves on. That’s the reason for the ODR, it’s a persistent state ensuring that the written instruction of the CPU is remembered until the output value has actually changed. 
+
+We again just have an array of flip flops clocked to the system clock and now written by the CPU over the bus. The bits that are written to it represent the level the GPIO output driver should attempt to attain. An important distinction from the IDR is that the driving of values in this case is software, not hardware. 
+
+The ODR feeds the output driver, which itself is either push-pull or open-drain, while also being either enabled or disabled by direction control. ODR stores the value while the driver applies it. Now it could be that the driver doesn’t apply it, for instance when the pin is still configured as input, or another component owns the pin at that moment, or a short occurs. There are many possible reasons for a mismatch between ODR instruction and output driver behavior. 
+
+**Direction control**
+
+What remains now is some minor tying up of how various parts interact with each other. Direction control is about two independent decisions that take place after the MUX has selected GPIO as the owner of the pin. This “pin” I’m speaking of is one of those physical pins visible on the outside of the MCU (See CPU post). Such pins can have three states: Something outside the MCU drives it (button, sensor, etc.), the MCU itself is driving it (forcing high or low), or nobody drives it (electrically floating). The MCU is what chooses which situation applies at an moment.
+
+This decision of the MCU is called direction control. We then want to know (1) whether the input path is enabled (CPU sensing the pin) and (2) whether the output driver is enabled (can CPU drive the pin). As such this direction control isn’t really part of the GPIO, other than in the way that it enables or disables input sensing and output driving. 
+
+These are kind of like two electrical switches controlled by one configuration decision. In software the decision is shown as a bit, 0 means input and 1 output. Physically, that pin is connecting two separate internal paths inside the MCU. There’s the input path where circuitry observes the pin voltage (Schmitt - synch - IDR) and then the output path where circuitry forces a voltage onto the pin (ODR - output driver - pin). That decision control decides which of these paths is allowed to touch the pin, electrically. 
+
+In input mode, the output driver is physically disconnected and the pin is configured as input. Pin voltage is determined by the outside world. So necessarily this means that if we’re in input mode, the output driver must be off. 
+
+In output mode, the output driver is connected and the pin is actively driven according to ODR. MCU is in full control over the pin. However, whether the input path is still enabled can vary by MCU. 
+
+Note that this decision takes the form of enable gates (remember the D-latch) on the input and output paths. This part exists solely to ensure clean separations. 
+
+**Output driver type**
+
+In output mode the MCU is allowed to drive the pin, yet we haven’t really seen how this is accomplished. There are different ways in how to drive it, and this leads us to the driver types. There are different ones, because we sometimes want the pin either high or low, while at other times we want it to be pulled but otherwise left alone or just let something else decide what happens. As such we have push-pull and open-drain.
+
+Physically, such a driver type is actually power hardware. Large transistors connect the pin to the power rail (VDD) or ground (GND) or nothing at all. This makes it the only part of the GPIO that can move real electrical energy as opposed to the decision making blocks we’ve been seeing. 
+
+The *push-pull output* is like a default version where the pin is actively driven high or low. There’s two transistors connected to the pin where one connects it to VDD (high) and the other to GND (low). Only one of them is then turned on at a time. If ODR = 1 the top transistor drives the pin high while if ODR = 0 the other drives it low. One pushes current out while the other pulls it into the pin. This output type gives the MCU full control with well defined pin voltage. It’s what we see when the LED blinks for example. 
+
+*Open-drain output* on the other hand will either pull the pin low or disconnect it entirely. There’s no transistor to pull the pin high. So we only have one transistor connecting the pin to GND (when ODR = 0) while nothing connects it to VDD. ODR = 1 then implies the transistor is off, and the pin  is in a high impedance state (meaning it’s highly resistant). Something outside the MCU is then able pull the pin to high. Such disconnection can be quite useful, for instance when multiple devices share a wire, then open drain can let either pull the pin low but neither force it high. 
+
+**Pull-up / Pull-down**
+
+We now get to solving some residual problems in the set-up. This GPIO pin is just a wire, and if we’re in a situation where for some reason neither the MCU or an external circuit is driving it, then the voltage on that wire is undefined. This implies that the wire is floating. It may pick up noise, go high or low, change based on randomness. We kind of want to prevent this because software has no way to reason in terms of maybe 0 or maybe 1. We again have a hardware problem that software cannot detect. 
+
+Remember that the GPIO has both an input and output mode, and in input mode the MCU is reading the pin but not driving it (the output driver is off). When input mode is active, we therefore want to ensure that we see a predictable default value even though nothing is happening necessarily. The pull-ups and pull-downs exist to ensure that we get a sort of default value whenever no on is driving the pin. 
+
+Physically, we have a resistor connected inside the MCU between this pin and either VDD (pull-up) and GND (pull-down). Such a resistor has quite high resistance (e.g. 50 kΩ), so it provides only little current to the pin and doesn’t really put up a fight for real drivers such as the push-pull output. If we look at Ohm’s law (I (current) = V(volt)/R(resistance)), than with typical values in our senseo case, we have 3.3V and 50kΩ internal pull-up resistance which implies a current of 66 µA. Meanwhile the GPIO push-pull driver pulls low with some 5 mA (thousands of µA). 
+
+If pull-up is enabled, then if nothing else drives the pin it will be read as high while if something else pulls it low, it’s read as low. This path is the reason buttons are often wired to GND, since that means that if they’re untouched, the pin floats and the pull up makes it high, while if pressed the button connects to GND and low wins. 
+
+If pull-down is enabled then the pin reads low if nothing else is driving it while high if something else drives it high. We here have a default low. With these pull-up and pull-downs we simply have bias sources for the pin. They’re most important for the input mode or for the open-drain output type, as then we have possibility of floating behavior.
+
