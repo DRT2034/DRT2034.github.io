@@ -34,7 +34,7 @@ Well PCB signal traces are just wires, which can do only one thing which is let 
 
 <img src="/assets/SenseoViz/17/MCU.JPG"
     width="240"
-    align="right"
+    align="left"
     style="margin: 0 0 1em 1em;"> 
 The place where such hardware changes become logic and mean something in the software sense, is the microcontroller (MCU). In our boiler section, we referred to the PCB like the body where all the wiring are connected, while MCU is the brain controlling the machine and the firmware inside the MCU is the memory (which the developer encodes). What gives the MCU such power is the ability to stack 100.000 to 1 million MOSFET transistors in it. This is the case in the Senseo machine, but in other appliances, or even say the smartphone, this goes up to billions. 
 
