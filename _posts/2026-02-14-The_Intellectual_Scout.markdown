@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Intellectual Scouting"
-date: 2026-02-014 10:02:32 +0200
+date: 2026-02-14 10:02:32 +0200
 categories: Opinion
 published: true
 ---
