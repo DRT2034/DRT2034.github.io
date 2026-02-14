@@ -53,6 +53,7 @@ We essentially turn our knowledge generating system into something resembling th
 What to do about this and provide a playing field for intellectual scouting to deploy naturally then? An idea here might be to move from models as agents to models as part of the principal unit. The idea is similar to the RAG described above, but instead we take an open source model that comprises all the available information available on the internet, and then tune it to be personalized and make us of our personal information.  
 
 The idea of intellectual scouting can then be discussed on two levels:
+
 **Institutions**: Here, companies and other institutions might increase competitive advantage by utilizing not only all available information, but by actively creating and gathering information and incorporating this into their models. 
 
 **Individuals**: Similarly the idea can be proposed to increase individual competitive advantage by increasing the information used in our lives. For instance: we go to the store for groceries on a weekly basis. During these visits we often buy the exact same things, but never optimize the information that’s there. We buy two packages because having a shortage in the middle of the week is annoying. But do we actually use two packages? Have you actually ever tracked your own consumption habits to verify whether you buying habits make sense? This is the type of information generation I’m talking about. 
