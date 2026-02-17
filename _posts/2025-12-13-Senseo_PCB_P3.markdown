@@ -3,9 +3,10 @@ layout: post
 title:  "PCB Fundamentals 3: CMOS Logic"
 date:   2025-12-13 05:30:21 +0200
 categories: Senseo 
-published: false
+published: true
 ---
-
+Talk about why there is such a thing as negative voltage for PMOS
+Talk about why combining and NMOS and a PMOS leads to energy saving
 
 #### Logic Gates
 
