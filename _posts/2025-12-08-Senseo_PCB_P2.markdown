@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PCB Fundamentals 2: Transistors & Logic Gates"
+title:  "PCB Fundamentals 2: MOSFET Transistors"
 date:   2025-12-08 05:43:21 +0200
 categories: Senseo 
 published: true
