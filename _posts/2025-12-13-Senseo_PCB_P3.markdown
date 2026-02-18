@@ -48,6 +48,11 @@ No physical object can actually sense these strict 0 and 1's. These are purely h
 
 The inverter actually helps straighten out a jittery input, as it pulls the output either strongly to VDD or to GND. 
 
+--> To expand, talk about when which starts turning on and why inverter straightens out the input 
+
+https://chatgpt.com/share/69954cac-bb90-800b-ab55-8f601ec2d1f3
+
+
 ## AND Gate 
 
 Now for the AND & OR gates, it must be noted that CMOS actually doesn’t directly create these, but instead naturally forms NAND & NOR after which we position an inverter. 
