@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Abundance at the individual level"
+title: "Abundance at the Individual Level"
 date: 2026-02-23 10:20:32 +0200
 categories: Opinion
 published: true
