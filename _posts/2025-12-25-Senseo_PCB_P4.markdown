@@ -6,17 +6,25 @@ categories: Senseo
 published: true
 ---
 
-The natural next step in our process of understanding is that of how to arrange voltages and use these logic gates to actually have decision making. We’d like to have a machine do what we’d like it to do when we push a button. Now with CMOS we already have a really powerful ingredient. We  can wire things in such a way that the output voltage is a function of input voltages. That’s the logic gates resulting from arranging PMOS and NMOS, which are essentially just doing Boolean algebra. 
+Now that we can build logic gates, the next question is: how do we use them to make useful decisions and computations?. We’d like to have a machine do what we’d like it to do when we push a button. Now with CMOS we already have a really powerful ingredient. We  can wire things in such a way that the output voltage is a function of input voltages. That’s the logic gates resulting from arranging PMOS and NMOS, which are essentially just doing Boolean algebra. 
 
-**Combinatorial logic and Arithmetic circuits**
+## Combinatorial logic and Arithmetic circuits
 
-Combinatorial logic is now just a type of logic where the output only depends on the current combination of inputs. The idea is that if we were to freeze the inputs, the output would also be fixed. Output can only change if inputs change. This might seem straightforward, but there’s another type of logic that introduces the idea of memory and the notion of time. 
+https://chatgpt.com/share/6997e838-9bdc-800b-92d0-60b17d3ab275
 
-As a result, this type of logic is kind of like a calculator (arithmetic circuits), which adds, subtracts , compares, select and so on. Because CMOS gates are very reliable, and never show ambiguity about whether the output is high or low (because either VDD or GND is completely cut off), we can build bigger decisions out of smaller one. So really what is done here is mapping inputs to outputs, physically.
+*Combinatorial logic* is a type of logic where the output only depends on the current inputs. The idea is that if we were to freeze the input, the output would also be fixed. Output can only change if input change. This might seem self-evident, but there’s another type of logic that introduces the idea of memory and the notion of time, called *sequential logic*. 
 
-This mapping is actually then just a list of cases of which the AND, OR & NOT gates are the building blocks. Binary digits (bits) come from the fact that we implement thresholds for transistors to switch on/off, otherwise there would be major voltage noise. Through the use of these logic gates, these bits are turned into inputs and outputs, of which a truth table may describe the possible states. The next step towards arithmetic and specifically addition is then actually another type of logic gate: the **XOR gate**. Its importance comes from the fact that it can isolate just the differences.
+https://chatgpt.com/share/6999589d-0fd4-800b-8308-74211bba423d
 
-With a regular OR gate, we have that output is high (1) if either A or B is on, *or both*. So the moment just one of them is one, output = 1. With XOR we just have that output is high only if A or B is 1, but not when both are high.  
+As a result, combinatorial logic can be seen as a calculator (arithmetic circuits), which adds, subtracts, compares, select and so on. What is done to create arithmetic is mapping inputs to outputs, physically.
+
+This mapping is essentially a list of instruction models of which the AND, OR & NOT gates are the building blocks. Binary digits (bits) come from the fact that we implement thresholds for transistors to switch on/off, otherwise there would be major voltage noise. Through the use of these logic gates, these bits are turned into inputs and outputs, of which a truth table may describe the possible states. 
+
+### Addition 
+
+The next step towards arithmetic and specifically addition is then actually another type of logic gate: the **XOR gate**. Its importance comes from the fact that it can isolate just the differences.
+
+With a regular OR gate, we have that output is high (1) if either A or B is on, *or both*. So the moment just one of them is on, output = 1. With XOR we just have that output is high only if A or B is 1, but not when both are high.  
 
 Now if we want to add a couple of bits, which is the simplest case of hardware arithmetic, we’d get the following truth table: 
 
@@ -61,7 +69,7 @@ Realistically there are three options at that point, either treat it as a larger
 
 And this is how adding works using the hardware we’ve seen. Using the same tools, all kinds of other operations can be handled, such as subtraction, comparison, absolute values, multiplication, division and so on. They’re not super straightforward and I’m interested to explore, but I’d digress too much. 
 
-**Sequential logic**
+## Sequential logic
 
 Now combinatorial logic has no memory, which means that only current inputs have an impact and that once inputs stop changing, the circuit stops doing anything. But what now if we want to count how many times a button is pressed or have steps going in the right order? That’s the reason we want a circuit whose output depends on the past and not exclusively on the present. 
 
