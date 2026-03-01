@@ -41,9 +41,9 @@ That’s the reason so many people find technology ugly. For me personally, I’
 
 When we truly immerse ourselves in an activity, we both feel them *and* analyze them. You cannot immerse truly if you only feel, or if you only analyze. Most people are inclined towards one or the other, but if we truly engage with something, harmonization of feeling and analyzing naturally appears. For Quality appears when *“feeling is guided by understanding”*.
 
-		“When the owner of a product cannot feel any sense of identity with that product, and neither can the producer of it feel any sense of identity with it, we say that product has no Quality. Technology *should* be a fusion of nature and the human spirit into a new kind of creation that transcends both. Publicly this happens for instance when man lands on the moon, but we should find this on an **individual level**.”
+>“When the owner of a product cannot feel any sense of identity with that product, and neither can the producer of it feel any sense of identity with it, we say that product has no Quality. Technology *should* be a fusion of nature and the human spirit into a new kind of creation that transcends both. Publicly this happens for instance when man lands on the moon, but we should find this on an **individual level**.”
 
-		“Personal transcendence of the problem of technology can be as simple as sharpening a knife or knitting a dress. In each case there is a beautiful way of doing it and an ugly way of doing it, and in arriving at the high-quality, beautiful way of doing it , both an ability to see what looks good and an ability to understand the underlying methods to arrive at that good are needed. Classic and romantic modes of thinking must be combined.”
+>“Personal transcendence of the problem of technology can be as simple as sharpening a knife or knitting a dress. In each case there is a beautiful way of doing it and an ugly way of doing it, and in arriving at the high-quality, beautiful way of doing it , both an ability to see what looks good and an ability to understand the underlying methods to arrive at that good are needed. Classic and romantic modes of thinking must be combined.”
 
 **Education, Jobs and Instruction Manuals** 
 
