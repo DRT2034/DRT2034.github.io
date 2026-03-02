@@ -3,7 +3,7 @@ layout: post
 title:  "PCB Fundamentals 4: Combinatorial v Sequential Logic"
 date:   2025-12-25 09:48:21 +0200
 categories: Senseo 
-published: false
+published: true
 ---
 
 Now that we can build logic gates, the next question is: how do we use them to make useful decisions and computations?. We’d like to have a machine do what we’d like it to do when we push a button. Now with CMOS we already have a really powerful ingredient. We  can wire things in such a way that the output voltage is a function of input voltages. That’s the logic gates resulting from arranging PMOS and NMOS, which are essentially just doing Boolean algebra. 
