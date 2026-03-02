@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h2 class="post-list-heading">Posts</h2>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% assign words = post.content | strip_html | strip_newlines | replace: "  ", " " | split: " " | size %}
+      {% assign minutes = words | plus: 199 | divided_by: 200 %}
+
+      <li>
+        <span class="post-meta">
+          {{ post.date | date: "%b %-d, %Y" }} • {{ minutes }} min read
+        </span>
+
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
