@@ -56,3 +56,20 @@ header {
   line-height: 1.65;
   border-radius: 4px;
 }
+
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  z-index: 9999;
+  background: #f42626;
+  transition: width 0.1s ease-out;
+}
+
+.post-meta {
+  opacity: 0.8;
+  font-size: 0.95em;
+  margin-bottom: 1rem;
+}
