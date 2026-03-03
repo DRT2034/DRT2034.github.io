@@ -10,11 +10,7 @@ Now that we can build logic gates, the next question is: how do we use them to m
 
 ## Combinatorial logic and Arithmetic circuits
 
-https://chatgpt.com/share/6997e838-9bdc-800b-92d0-60b17d3ab275
-
 *Combinatorial logic* is a type of logic where the output only depends on the current inputs. The idea is that if we were to freeze the input, the output would also be fixed. Output can only change if input change. This might seem self-evident, but there’s another type of logic that introduces the idea of memory and the notion of time, called *sequential logic*. 
-
-https://chatgpt.com/share/6999589d-0fd4-800b-8308-74211bba423d
 
 As a result, combinatorial logic can be seen as a calculator (arithmetic circuits), which adds, subtracts, compares, select and so on. What is done to create arithmetic is mapping inputs to outputs, physically.
 
