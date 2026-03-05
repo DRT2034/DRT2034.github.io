@@ -44,7 +44,7 @@ Logically nothing changes really. Each position can now hold values 0 to 1 inste
 [Eights|Fours|Twos|Ones|.|ones|twos]
 [2^3|2^2|2^1|2^0|.|2^-1|2^-2]
 
-A binary 1 0 1 is therefore '1*2^2 0*2^1 1*2^0' = 4 + 0 + 1 = 5. It's a little tricky to wrap the head around, but still quite intuitive. 
+A binary 1 0 1 is therefore '1 * 2^2 0 * 2^1 1 * 2^0' = 4 + 0 + 1 = 5. It's a little tricky to wrap the head around, but still quite intuitive. 
 
 Similar to before, we have a carry rule. Instead of 9+1 giving 10, we now have 1+1 needing a carry and becoming binary 1 0. We can therefore already see some basic notations: 
 
