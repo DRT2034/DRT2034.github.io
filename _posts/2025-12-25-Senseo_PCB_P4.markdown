@@ -46,35 +46,31 @@ Logically nothing changes really. Each position can now hold values 0 to 1 inste
 
 A binary 1 0 1 is therefore '1*2^2 0*2^1 1*2^0' = 4 + 0 + 1 = 5. It's a little tricky to wrap the head around, but still quite intuitive. 
 
+Similar to before, we have a carry rule. Instead of 9+1 giving 10, we now have 1+1 needing a carry and becoming binary 1 0. We can therefore already see some basic notations: 
 
+- 0+0=0
+- 0+1=1 (and vice versa)
+- 1+1= 1 0 (two wires needed to represent this)
+- 1+2= 1+1+1= 1 1 
 
+**Logic Representation**
 
-Not much is different, except for the fact that we're working with voltages and so the care doesn't happen when we go to double digits like 10, but instead the moment we exceed 1. 1 plus 1 is 2, so our solution is 1, and we carry a 
+Since our Senseo electronics are only able to represent the binary 0 and 1, we naturally fall into base-2 binary addition. Now each position will be represented by a wire, but some more ingredients are needed to accurately represent the carry system. This leads us to the natural combination of a XOR gate and the AND gate, whose joint output is capable of the job. 
 
+We already saw the OR gate, but there we had it that output is high (1) if either A or B is on, *or both*. So the moment just one of them is on, output = 1. Now with XOR we get the *Exclusive OR*, meaning thatoutput is only 1 whenever A or B is 1, but not both. 
 
-Base 2 
-
-
-
-
-The same logic comes in here. The sum column we can easily recognize as actually being just an XOR gate, while the carry is represented by an AND gate. The reason we have a carry here is because summing 1 and 1 makes 2, but hardware can only represent one bit per wire, so we carry the one. This carry then represents information not fitting the current bit position. 
-
-
-
-
-The next step towards arithmetic and specifically addition is then actually another type of logic gate: the **XOR gate**. Its importance comes from the fact that it can isolate just the differences.
-
-With a regular OR gate, we have that output is high (1) if either A or B is on, *or both*. So the moment just one of them is on, output = 1. With XOR we just have that output is high only if A or B is 1, but not when both are high.  
-
-Now if we want to add a couple of bits, which is the simplest case of hardware arithmetic, we’d get the following truth table: 
+Now if we want to add a 2 bits, which is the simplest case of hardware/binary addition, we’d get the following truth table: 
 
 <div style="text-align: center;">
   <img src="/assets/SenseoViz/14/ADDtruth.png" width="340">
 </div>
 
-I had completely forgotten about the idea of ‘carry’, but it’s just the logic of kindergarten math: if we want to add for instance 156 and 155, we place them above each other and go number by number. Since 5 and 6 add to 11, we have the *carry* the one to the next addition of 5 and 5 (and then again to the next). The same logic comes in here. The sum column we can easily recognize as actually being just an XOR gate, while the carry is represented by an AND gate. The reason we have a carry here is because summing 1 and 1 makes 2, but hardware can only represent one bit per wire, so we carry the one. This carry then represents information not fitting the current bit position. 
+The sum column we can easily recognize as actually being just an XOR gate, while the carry can actually easily be represented by an *AND* gate. This carry (AND gate) then represents information not fitting the current bit position. The hardware has no idea it's summing or carrying, though, that's just our interpretation. Like we said before, we know what output we'd like, so we work ourselves back to ensure the inputs align. 
 
-Now these XOR and AND gates are merely the voltage classifiers we’ve seen earlier, but their joint output matches what we call addition. The hardware itself has no idea what it’s doing. 
+https://chatgpt.com/share/69a9174c-314c-800b-9f0b-4541a067c21a
+
+
+
 
 Binary addition, such as in computers, produces two outputs out of inputs A and B: a sum bit (represented by XOR) and a carry bit (AND). These gates express the independent logical fact of the situation of A and B. These gates are then placed in a circuit so that we can have both facts (sum and carry) at the same time. Two wires go from A and B and in a parallel manner: 
 
