@@ -67,7 +67,6 @@ Now if we want to add a 2 bits, which is the simplest case of hardware/binary ad
 
 The sum column we can easily recognize as actually being just an XOR gate, while the carry can actually easily be represented by an *AND* gate. This carry (AND gate) then represents information not fitting the current bit position. The hardware has no idea it's summing or carrying, though, that's just our interpretation. Like we said before, we know what output we'd like, so we work ourselves back to ensure the inputs align. 
 
-https://chatgpt.com/share/69a9174c-314c-800b-9f0b-4541a067c21a
 
 
 
