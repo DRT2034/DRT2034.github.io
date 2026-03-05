@@ -28,7 +28,7 @@ Now this is quite far in memory but in kindergarten math we encountered the noti
 
 What we're then using is a base-10, where we use numbers 0 to 9 and multiply with 10 to a certain power. This idea comes from the decimal place value chart:
  
-[ Thousands | Hundreds | Tens | Ones |.| Tenths | Hundreds ]
+[Thousands|Hundreds|Tens|Ones|.|Tenths|Hundreds]
 
 
 
