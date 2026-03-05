@@ -29,14 +29,28 @@ Now this is quite far in memory but in kindergarten math we encountered the noti
 What we're then using is a base-10, where we use numbers 0 to 9 and multiply with 10 to a certain power. This idea comes from the decimal place value chart:
  
 [Thousands|Hundreds|Tens|Ones|.|Tenths|Hundreds]
+[10^3|10^2|10^1|10^0|.|10^-1|10^-2]
 
+Each position in for instance 156 is then represented as a power of 10, so 1 * 100 (10^2 since two places left of the ones), 5 * 10 (10^1), 6*1 (10^0). The general rule is "digit × (base^position)". 
+
+We then have rules such as the carry, where if we add two numbers that go beyond the 0-9 values that are possible in a certain position, we carry that to the next position. 9 + 1, which is 9 * 10^0 + 1 * 10^0, would've become 10 * 10^0, but there is no place, so we carry and denote as 1 * 10^1 = 10. 
+
+**Binary Addition** 
+
+The same idea now holds for our binary system, which we need to represent bits using voltage as signal. We're now not in a base-10 system but instead in a base-2 system. 
+
+Logically nothing changes really. Each position can now hold values 0 to 1 instead of 0 to 9, and our positions aren't determined by powers of 10 but instead powers of 2. 
+
+[Eights|Fours|Twos|Ones|.|ones|twos]
+[2^3|2^2|2^1|2^0|.|2^-1|2^-2]
+
+A binary 1 0 1 is therefore '1*2^2 0*2^1 1*2^0' = 4 + 0 + 1 = 5. It's a little tricky to wrap the head around, but still quite intuitive. 
 
 
 
 
 Not much is different, except for the fact that we're working with voltages and so the care doesn't happen when we go to double digits like 10, but instead the moment we exceed 1. 1 plus 1 is 2, so our solution is 1, and we carry a 
 
-Base 10
 
 Base 2 
 
