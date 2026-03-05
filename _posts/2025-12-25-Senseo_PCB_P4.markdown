@@ -6,17 +6,47 @@ categories: Senseo
 published: true
 ---
 
-Now that we can build logic gates, the next question is: how do we use them to make useful decisions and computations?. We’d like to have a machine do what we’d like it to do when we push a button. Now with CMOS we already have a really powerful ingredient. We  can wire things in such a way that the output voltage is a function of input voltages. That’s the logic gates resulting from arranging PMOS and NMOS, which are essentially just doing Boolean algebra. 
+Now that we can build logic gates, the next question is: how do we use them to make useful decisions and computations? We’d like to have a machine react to inputs and perform the correct actions resulting from those. Now with CMOS we have a really powerful ingredient. We can wire things in such a way that the output voltage is a function of input voltages. That’s the logic gates resulting from arranging PMOS and NMOS, which are essentially just doing Boolean algebra. 
 
 ## Combinatorial logic and Arithmetic circuits
 
-*Combinatorial logic* is a type of logic where the output only depends on the current inputs. The idea is that if we were to freeze the input, the output would also be fixed. Output can only change if input change. This might seem self-evident, but there’s another type of logic that introduces the idea of memory and the notion of time, called *sequential logic*. 
+*Combinatorial logic* is a type of logic where the output only depends on the current inputs. It's the logic we've been in up till now. When there's a change in input at a given moment, that change is translated to the output almost instantaneously. This might seem self-evident, but there’s another type of logic that introduces the idea of memory and the notion of time, called *sequential logic*. 
 
-As a result, combinatorial logic can be seen as a calculator (arithmetic circuits), which adds, subtracts, compares, select and so on. What is done to create arithmetic is mapping inputs to outputs, physically.
+As a result, within this logic family, we could build and structure our logic gates in such a way where the output is a function of inputs [y=f(x)]. Essentially based on our boolean gates we could mimic basic algebraic formulas, including adding, substracting, comparing, selecting and so on. This is also where the idea of a calculator came in historically, through transistors and logic gates. 
 
-This mapping is essentially a list of instruction models of which the AND, OR & NOT gates are the building blocks. Binary digits (bits) come from the fact that we implement thresholds for transistors to switch on/off, otherwise there would be major voltage noise. Through the use of these logic gates, these bits are turned into inputs and outputs, of which a truth table may describe the possible states. 
+I realize this is quite abstract still, but consider the truth table, which we saw for instance for the NAND gate in last post. Based on a complex circuit of transistors that are merely puzzled together in a certain combination, we can derive a logical and consistent result. We get sort of rules about what input combination leads to what output. *So when we know what kind of output we want, we can work ourselves backward and see which combination of inputs is needed.* That's the big idea of combinatorial logic, which we'll here explore for the most basic arithmetic example of 'addition'. 
 
 ### Addition 
+
+As mentioned, when we know what kind of output we'd like to have, we must work our way backward to see which combination of inputs is needed for it. What is first needed here, though, is a little recap on what addition actually is. 
+
+**Decimal Addition**
+
+The usual addition we've all know and learned in school is the decimal one. It's what we use in everyday live by counting on our hands if necessary. 
+
+Now this is quite far in memory but in kindergarten math we encountered the notion of a "carry". if we want to add for instance 156 and 155, we place them above each other and go number by number. Since 5 and 6 add to 11, we have the *carry* the one to the next addition of 5 and 5 (and then again to the next). 
+
+What we're then using is a base-10, where we use numbers 0 to 9 and multiply with 10 to a certain power. This idea comes from the decimal place value chart:
+ 
+[ Thousands | Hundreds | Tens | Ones |.| Tenths | Hundreds ]
+
+
+
+
+
+Not much is different, except for the fact that we're working with voltages and so the care doesn't happen when we go to double digits like 10, but instead the moment we exceed 1. 1 plus 1 is 2, so our solution is 1, and we carry a 
+
+Base 10
+
+Base 2 
+
+
+
+
+The same logic comes in here. The sum column we can easily recognize as actually being just an XOR gate, while the carry is represented by an AND gate. The reason we have a carry here is because summing 1 and 1 makes 2, but hardware can only represent one bit per wire, so we carry the one. This carry then represents information not fitting the current bit position. 
+
+
+
 
 The next step towards arithmetic and specifically addition is then actually another type of logic gate: the **XOR gate**. Its importance comes from the fact that it can isolate just the differences.
 
