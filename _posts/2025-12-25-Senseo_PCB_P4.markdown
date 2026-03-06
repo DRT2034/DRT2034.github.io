@@ -14,7 +14,7 @@ Now that we can build logic gates, the next question is: how do we use them to m
 
 As a result, within this logic family, we could build and structure our logic gates in such a way where the output is a function of inputs [y=f(x)]. Essentially based on our boolean gates we could mimic basic algebraic formulas, including adding, subtracting, comparing, selecting and so on. This is also where the idea of a calculator came in historically, through transistors and logic gates. 
 
-I realize this is quite abstract still, but consider the truth table, which we saw for instance for the NAND gate in last post. Based on a complex circuit of transistors that are merely puzzled together in a certain combination, we can derive a logical and consistent result. We get sort of rules about what input combination leads to what output. *So when we know what kind of output we want, we can work ourselves backward and see which combination of inputs is needed.* That's the big idea of combinatorial logic, which we'll here explore for the most basic arithmetic example of 'addition'. 
+I realize this is quite abstract still, but consider the truth table, which we saw for instance for the NAND gate in the last post. Based on a complex circuit of transistors that are merely puzzled together in a certain combination, we can derive a logical and consistent result. We get sort of rules about what input combination leads to what output. *So when we know what kind of output we want, we can work ourselves backward and see which combination of inputs is needed.* That's the big idea of combinatorial logic, which we'll here explore for the most basic arithmetic example of 'addition'. 
 
 ### Addition 
 
@@ -28,7 +28,7 @@ Now this is quite far in memory but in kindergarten math we encountered the noti
 
 What we're then using is a base-10, where we use numbers 0 to 9 and multiply with 10 to a certain power. This idea comes from the decimal place value chart:
  
-[Thousands|Hundreds|Tens|Ones|.|Tenths|Hundreds]
+[Thousands|Hundreds|Tens|Ones|.|Tenths|Hundredths]
 [10^3|10^2|10^1|10^0|.|10^-1|10^-2]
 
 Each position in for instance 156 is then represented as a power of 10, so 1 * 100 (10^2 since two places left of the ones), 5 * 10 (10^1), 6*1 (10^0). The general rule is *digit × (base^position)*. 
@@ -44,7 +44,7 @@ Logically nothing changes really. Each position can now hold values 0 to 1 inste
 [Eights|Fours|Twos|Ones|]
 [2^3|2^2|2^1|2^0|]
 
-A binary 1 0 1 is therefore '1 * 2^2 0 * 2^1 1 * 2^0' = 4 + 0 + 1 = 5. It's a little tricky to wrap the head around, but still quite intuitive. 
+A binary 1 0 1 is therefore 1 * 2^2 0 * 2^1 1 * 2^0 = 4 + 0 + 1 = 5. It's a little tricky to wrap the head around, but still quite intuitive. 
 
 Similar to before, we have a carry rule. Instead of 9+1 giving 10, we now have 1+1 needing a carry and becoming binary 1 0. We can therefore already see some basic notations: 
 
@@ -55,7 +55,7 @@ Similar to before, we have a carry rule. Instead of 9+1 giving 10, we now have 1
 
 Everything else comes from the carry propagation.
 
-Each bit position then represents a wire, and so we arrive at for instance a 4 bit (base 2) number as 4 wires, such as for instance 0100 (1 * 2^2) which is 4. Doing some math, the max value such as 4 bit number can take is 15, which is quite small. Now since these 4 bits really are just wires, we can easily scale this. An 8 bit has max value 255, a 32 bit 4 billion, and 64 bit such as a modern laptop up to 18.4 with 18 digits behind it (quintillion?). 
+Each bit position then represents a wire, and so we arrive at for instance a 4-bit (base 2) number as 4 wires, such as for instance 0100 (1 * 2^2) which is 4. Doing some math, the max value such as 4-bit number can take is 15, which is quite small. Now since these 4-bits really are just wires, we can easily scale this. An 8-bit has max value 255, a 32 bit 4 billion, and 64-bit such as a modern laptop up to 18.4 with 18 digits behind it (quintillion?). 
 
 **Logic Representation**
 
@@ -63,7 +63,7 @@ Since our Senseo electronics are only able to represent the binary 0 and 1 throu
 
 We already saw the OR gate, but there we had it that output is high (1) if either A or B is high, *or both*. So the moment just one of them is on, output = 1. Now with XOR we get the *Exclusive OR*, meaning that output is only 1 whenever A or B is 1, but not both. 
 
-Now if we want to add a 2 bits, which is the simplest case of hardware/binary addition, we’d get the following truth table: 
+Now if we want to add 2 bits, which is the simplest case of hardware/binary addition, we’d get the following truth table: 
 
 <div style="text-align: center;">
   <img src="/assets/SenseoViz/14/ADDtruth.png" width="340">
@@ -71,21 +71,15 @@ Now if we want to add a 2 bits, which is the simplest case of hardware/binary ad
 
 The sum column we can easily recognize as actually being just an XOR gate, while the carry can actually easily be represented by an *AND* gate. This carry (AND gate) then represents information not fitting the current bit position. The hardware has no idea it's summing or carrying, though, that's just our interpretation. Like we said before, we know what output we'd like, so we work ourselves back to ensure the inputs align. 
 
+And just like the above truth table displayed, we now arrive at the wish to add two inputs A and B. We also saw that the whole mechanism of carrying can be entirely represented by two gates, XOR and AND. All that remains is to formalize the mechanics. 
 
-
-
-
-
-
-
-
-Binary addition, such as in computers, produces two outputs out of inputs A and B: a sum bit (represented by XOR) and a carry bit (AND). These gates express the independent logical fact of the situation of A and B. These gates are then placed in a circuit so that we can have both facts (sum and carry) at the same time. Two wires go from A and B and in a parallel manner: 
+The half adder is actually what we have here. We let A and B flow to a parallel circuit where both are connected to the input of an AND gate and a XOR gate. Intuitively, it makes sense that if neither A or B is high, neither gate will see anything. When A is high or B is high but not both, the XOR gate's output will represent the one resulting from this. Meanwhile if both A and B are high, the XOR gate's output will be low (0), but the AND gate's output will be high (1). And so we get a carry; 1 + 1 = a carry to the next wire (1 0).
 
 <div style="text-align: center;">
   <img src="/assets/SenseoViz/14/HalfAdder.png" width="340">
 </div>
 
-This makes it a ‘half’ adder and essentially tries to answer two questions (see truth table), whether the voltages are different (XOR) and whether both voltages are high (AND). By having the wires to these gates in parallel, both can be answered and serve to decompose the relation of A with B. 
+This makes it a ‘half’ adder and essentially tries to answer two questions, whether the voltages are different (XOR) and whether both voltages are high (AND). By having the wires to these gates in parallel, both can be answered and serve to decompose the relation of A with B. 
 
 From this we can go to the **full adder**, because with binary addition when we add multi-bit numbers, each bit position must also accept a carry from the previous position. In a full adder, we then have the sum being the bit that stays in position, and the *carry out* which is the bit that moves to the next position. As such we have A + B + Carry-in —> (sum, carry-out). Remember the addition of 156 and 155, when we get to the sum of 5 and 5 in the middle, we also have a carry-in from before so must take this into account. 
 
@@ -93,22 +87,18 @@ From this we can go to the **full adder**, because with binary addition when we 
   <img src="/assets/SenseoViz/14/FullAdder.png" width="340">
 </div>
 
-In physical terms this carry-in is just a wire coming from the previous stage. You see, in practice, numbers are often represented by multiple bits. A single bit would only be able to take on two values (that we conceptually interpret from it), namely yes/no, 1/0 etc. Now with multiple bits, a general rule is that n bits translate into 2^n values. A two-bit number will therefore be able to take on 4 values: 0 (00), 1 (01), 2 (10), 3 (11). 
+In physical terms this carry-in is just a wire coming from the previous stage. You see, in practice, numbers are often represented by multiple bits. A single bit would only be able to take on two values (that we conceptually interpret from it), namely yes/no, 1/0 etc. 
 
-This assignment of numbers comes from the fact that computes use a base-2 number system (us humans conceptualize this, not the hardware), where each position has a place value which is a power of 2: right bit has place value 2^0 = 1 and left bit 2^1 = 2. So with 01, we simply add the value where the bit is 1, here it’s the right place, so we have value 1. For 11, we have both, so must add 2+1. 
-
-This base refers to the number of symbols we’re allowed to use in each position and as such then we must ‘carry’ to the next one. We have binary numbers here, so after 1 there’s no new symbol, and we must carry to the next place. There exist many bases, such as base-8, base-10 and so on, but computers prefer the base-2 as it forms the natural situation resulting from electricity. 
-
-Now going back to the multi-bit situation to better comprehend this full adder logic, the two-bit scenario with 4 values will have 2 stages. And if we extend the logic of always having A and B inputs, we see the full picture of this two-bit number as:
+The two-bit scenario with 4 values will have 2 stages. And if we extend the logic of always having A and B inputs, we see the full picture of this two-bit number as:
 
 	A0; A1; 
 	B0; B1;
 
-So in stage 0 (A0,B0), we always just have the half adder. There’s two inputs and from their combination we may have no values (00), XOR values (10 or 01) or and values (11). Now in hardware arithmetic logic, this translates in having either nothing happen (0), a sum happen (simply 1) or a carry in the case of the AND gate being activated. This carry must go to the next stage, where it comes in as a carry-in. 
+So in stage 0 (A0,B0), we always just have the half adder. The result of this half adder can be either nothing happens (0), a sum happens (simply 1) or a carry in the case of the AND gate being activated. This carry must go to the next stage, where it comes in as a *carry-in*. We then get to stage 1 (A1,B1), which is a full adder, since the carry in from stage 0 helps conceptualize the prior value. Again, we've just looked at what output we desire, and puzzled it together so that the input behaves accordingly. 
 
-Now at the last stage, you might wonder, what happens if we must carry again? Well there is no next stage to carry to, so the adder block usually just has a wire coming out which is seen as a separate output pin, the overflow. It’s then up to the system designer to make use of this in some way. So after the last stage we’ll see three wires coming out, two for sum, one for carry. 
+Now at the last stage, you might wonder, what happens if we must carry again? And that's a very good question. There is essentially no next stage to carry to, so the adder block usually just has a wire coming out which is seen as a separate output pin, the *carry-out*. It’s then up to the system designer to make use of this in some way. So after the last stage, here in our two bit example, we’ll see three wires coming out, two sums, and one for carry. In multi bit circuits, however, there'll be as many sum wires at the end as there were stages/positions, plus the 1 carry-out.
 
-Realistically there are three options at that point, either treat it as a larger number (100 binary), ignore the third wire as overflow, or connect it to another stage, which is how we can make a 3-bit adder. 
+Realistically there are three options at that point, either treat it as a larger number (100 binary), ignore the third wire as carry-out, or connect it to another stage, which is how we can make a 3-bit adder. 
 
 And this is how adding works using the hardware we’ve seen. Using the same tools, all kinds of other operations can be handled, such as subtraction, comparison, absolute values, multiplication, division and so on. They’re not super straightforward and I’m interested to explore, but I’d digress too much. 
 
