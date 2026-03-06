@@ -12,7 +12,7 @@ Now that we can build logic gates, the next question is: how do we use them to m
 
 *Combinatorial logic* is a type of logic where the output only depends on the current inputs. It's the logic we've been in up till now. When there's a change in input at a given moment, that change is translated to the output almost instantaneously. This might seem self-evident, but there’s another type of logic that introduces the idea of memory and the notion of time, called *sequential logic*. 
 
-As a result, within this logic family, we could build and structure our logic gates in such a way where the output is a function of inputs [y=f(x)]. Essentially based on our boolean gates we could mimic basic algebraic formulas, including adding, substracting, comparing, selecting and so on. This is also where the idea of a calculator came in historically, through transistors and logic gates. 
+As a result, within this logic family, we could build and structure our logic gates in such a way where the output is a function of inputs [y=f(x)]. Essentially based on our boolean gates we could mimic basic algebraic formulas, including adding, subtracting, comparing, selecting and so on. This is also where the idea of a calculator came in historically, through transistors and logic gates. 
 
 I realize this is quite abstract still, but consider the truth table, which we saw for instance for the NAND gate in last post. Based on a complex circuit of transistors that are merely puzzled together in a certain combination, we can derive a logical and consistent result. We get sort of rules about what input combination leads to what output. *So when we know what kind of output we want, we can work ourselves backward and see which combination of inputs is needed.* That's the big idea of combinatorial logic, which we'll here explore for the most basic arithmetic example of 'addition'. 
 
@@ -22,7 +22,7 @@ As mentioned, when we know what kind of output we'd like to have, we must work o
 
 **Decimal Addition**
 
-The usual addition we've all know and learned in school is the decimal one. It's what we use in everyday live by counting on our hands if necessary. 
+The usual addition we've all known and learned in school is the decimal one. It's what we use in everyday life by counting on our hands if necessary. 
 
 Now this is quite far in memory but in kindergarten math we encountered the notion of a "carry". if we want to add for instance 156 and 155, we place them above each other and go number by number. Since 5 and 6 add to 11, we have the *carry* the one to the next addition of 5 and 5 (and then again to the next). 
 
@@ -31,7 +31,7 @@ What we're then using is a base-10, where we use numbers 0 to 9 and multiply wit
 [Thousands|Hundreds|Tens|Ones|.|Tenths|Hundreds]
 [10^3|10^2|10^1|10^0|.|10^-1|10^-2]
 
-Each position in for instance 156 is then represented as a power of 10, so 1 * 100 (10^2 since two places left of the ones), 5 * 10 (10^1), 6*1 (10^0). The general rule is "digit × (base^position)". 
+Each position in for instance 156 is then represented as a power of 10, so 1 * 100 (10^2 since two places left of the ones), 5 * 10 (10^1), 6*1 (10^0). The general rule is *digit × (base^position)*. 
 
 We then have rules such as the carry, where if we add two numbers that go beyond the 0-9 values that are possible in a certain position, we carry that to the next position. 9 + 1, which is 9 * 10^0 + 1 * 10^0, would've become 10 * 10^0, but there is no place, so we carry and denote as 1 * 10^1 = 10. 
 
@@ -41,23 +41,27 @@ The same idea now holds for our binary system, which we need to represent bits u
 
 Logically nothing changes really. Each position can now hold values 0 to 1 instead of 0 to 9, and our positions aren't determined by powers of 10 but instead powers of 2. 
 
-[Eights|Fours|Twos|Ones|.|ones|twos]
-[2^3|2^2|2^1|2^0|.|2^-1|2^-2]
+[Eights|Fours|Twos|Ones|]
+[2^3|2^2|2^1|2^0|]
 
 A binary 1 0 1 is therefore '1 * 2^2 0 * 2^1 1 * 2^0' = 4 + 0 + 1 = 5. It's a little tricky to wrap the head around, but still quite intuitive. 
 
 Similar to before, we have a carry rule. Instead of 9+1 giving 10, we now have 1+1 needing a carry and becoming binary 1 0. We can therefore already see some basic notations: 
 
-- 0+0=0
-- 0+1=1 (and vice versa)
-- 1+1= 1 0 (two wires needed to represent this)
-- 1+2= 1+1+1= 1 1 
+- 0+0 = 0   
+- 0+1 = 1     
+- 1+0 = 1     
+- 1+1 = 10   
+
+Everything else comes from the carry propagation.
+
+Each bit position then represents a wire, and so we arrive at for instance a 4 bit (base 2) number as 4 wires, such as for instance 0100 (1 * 2^2) which is 4. Doing some math, the max value such as 4 bit number can take is 15, which is quite small. Now since these 4 bits really are just wires, we can easily scale this. An 8 bit has max value 255, a 32 bit 4 billion, and 64 bit such as a modern laptop up to 18.4 with 18 digits behind it (quintillion?). 
 
 **Logic Representation**
 
-Since our Senseo electronics are only able to represent the binary 0 and 1, we naturally fall into base-2 binary addition. Now each position will be represented by a wire, but some more ingredients are needed to accurately represent the carry system. This leads us to the natural combination of a XOR gate and the AND gate, whose joint output is capable of the job. 
+Since our Senseo electronics are only able to represent the binary 0 and 1 through voltage, we naturally fall into base-2 binary addition. Now each position will be represented by a wire, but some more ingredients are needed to accurately represent the carry system. This leads us to the natural combination of a XOR gate and the AND gate, whose joint output is capable of the job. 
 
-We already saw the OR gate, but there we had it that output is high (1) if either A or B is on, *or both*. So the moment just one of them is on, output = 1. Now with XOR we get the *Exclusive OR*, meaning thatoutput is only 1 whenever A or B is 1, but not both. 
+We already saw the OR gate, but there we had it that output is high (1) if either A or B is high, *or both*. So the moment just one of them is on, output = 1. Now with XOR we get the *Exclusive OR*, meaning that output is only 1 whenever A or B is 1, but not both. 
 
 Now if we want to add a 2 bits, which is the simplest case of hardware/binary addition, we’d get the following truth table: 
 
@@ -66,6 +70,10 @@ Now if we want to add a 2 bits, which is the simplest case of hardware/binary ad
 </div>
 
 The sum column we can easily recognize as actually being just an XOR gate, while the carry can actually easily be represented by an *AND* gate. This carry (AND gate) then represents information not fitting the current bit position. The hardware has no idea it's summing or carrying, though, that's just our interpretation. Like we said before, we know what output we'd like, so we work ourselves back to ensure the inputs align. 
+
+
+
+
 
 
 
